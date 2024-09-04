@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Environmental Pollution Monitor | Geodatapals </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="styles/environmental_pollution_map.css">
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598551111391475"
+        crossorigin="anonymous"></script>
+
+    <!-- Remove Add Blockers -->
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-5598551111391475?ers=1"
+        nonce="KbNlHiNnc3EKTFZZgkiPgA"></script>
+    <script
+        nonce="KbNlHiNnc3EKTFZZgkiPgA">(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+    <!-- Open Graph meta tags -->
+
+    <meta property="og:title" content=" Environmental Pollution Monitor | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/pollution_map.PNG" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content=" Geodatapals Environmental Pollution Map" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+    <!-- Favicons -->
+    <base href="/" />
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" style="width:100px">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- Vendor CSS Files -->
+
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/dist/style.css">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- <link href="/static/css/profile.css" rel="stylesheet"> -->
+    <!-- Links of CSS files -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+        integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/static/assets/css/simplebar.min.css">
+    <link rel="stylesheet" href="/static/assets/css/metismenu.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/lib/leaflet-measure.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/lib/Control-Sidebar.css">
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/static/lib/Leaflet.StyledLayerControl-master/css/styledLayerControl.css">
+    <link rel="stylesheet" href="/static/lib/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+    <script src="/static/ckeditor/ckeditor-init.js"></script>
+    <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/dist/style.css">
+
+
+    <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Start Main Content Wrapper Area -->
+    <div class="main-content-wrapper d-flex flex-column" style="background-color: #e1e9e6;">
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <!-- <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@geodatapals.com"><span style="font-size: 12px;">info@geodatapals.com</span></a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span style="font-size: 11px;">+49 1520 3049167</span></i>
+
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/geodatapals" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div> -->
+        </section>
+
+        <!-- ZUSt start -->
+
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area" style="margin-bottom: 10px; background-color:#106eea">
+            <div class="main-responsive-nav">
+                <div class="main-responsive-menu">
+                    <div class="responsive-burger-menu d-lg-none d-block">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+                        <img src="/static/img/apple-touch-icon.png" style="height:50px; margin-top: -5px " alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="navbar-burger-menu m-auto">
+
+
+
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+
+                        <div class="search-box m-auto" id="search">
+                            <form method="get" action="/search" style="color:blue;">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="jkwMNyKgwK3jdZ0nvsryw0s6E4FuqCVCn0BjrFCUy9xC0dn4R96jdYjSq3aAkfrb">
+                                <input type="text" name="q" class="input-search"
+                                    style="background-color:#106eea; border: 2px solid white" placeholder="Search...">
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <a href="/" class="home-btn"><i class="flaticon-home"
+                                        style="padding-bottom: 20%;"></i></a>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="dropdown language-option">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="flaticon-global"></i>
+                                        <span class="lang-name"></span>
+                                    </button>
+
+                                    <!-- <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uk.png" alt="flag">
+                                                Geoportal
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/china.png" alt="flag">
+                                                简体中文
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uae.png" alt="flag">
+                                                العربيّة
+                                            </a>
+                                        </div> -->
+
+                                    <div class="dropdown-menu language-dropdown-menu">
+                                        <a class="dropdown-item" href="/geoportal/environmental_pollution_map/"
+                                            style="background-color: #4169e1; color: white">
+                                            Environmental Pollution Monitor
+
+                                        </a>
+
+                                        <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                            Health Mapper
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/disease_map/">
+                                            Disease Tracking Map
+
+                                        </a>
+
+                                        <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                            Water Availability Map
+                                        </a>
+                                        <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                            Supply Chain Mapper
+                                        </a>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="others-option-for-responsive">
+                <!-- <div class="container" style="margin-top: 20px;"> -->
+                <div class="container" style="margin-top: -4px;">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <i class="bi bi-menu-down mobile-nav-toggle" style="color: #fff;">
+
+                            </i>
+                        </div>
+
+                    </div>
+
+                    <div class="container" style="background-color:#106eea;">
+                        <div class="option-inner">
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <a href="/" class="home-btn"><i class="flaticon-home"></i></a>
+                                </div>
+
+                                <!-- ####### Start Notifications -->
+
+                                <!-- ##### End Notifications  -->
+                                <div class="option-item">
+                                    <div class="dropdown language-option">
+                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="flaticon-global"></i>
+                                            <span class="lang-name"></span>
+                                        </button>
+
+
+                                        <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="/geoportal/environmental_pollution_map/"
+                                                style="background-color: #4169e1; color: white">
+                                                Environmental Pollution Monitor
+
+                                            </a>
+
+                                            <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                                Health Mapper
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/disease_map/">
+                                                Disease Tracking Map
+
+                                            </a>
+
+                                            <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                                Water Availability Map
+                                            </a>
+                                            <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                                Supply Chain Mapper
+                                            </a>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="option-item">
+                                    <div class="search-box" id="search">
+                                        <form method="get" action="/search" style="color:white;">
+                                            <input type="hidden" name="csrfmiddlewaretoken"
+                                                value="jkwMNyKgwK3jdZ0nvsryw0s6E4FuqCVCn0BjrFCUy9xC0dn4R96jdYjSq3aAkfrb">
+                                            <!-- <input type="text" name="q" class="input-search" style="background-color:#106eea;color:white; border: 2px solid white" placeholder="Search..."> -->
+                                            <input type="text" name="q" class="input-search"
+                                                style="background-color:white;color:blue; border: 2px solid white"
+                                                placeholder="Search...">
+                                            <button type="submit"><i class="ri-search-line"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="responsive-burger-menu d-lg-none d-block">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="/accounts/register/" class="nav-link">
+                            <span class="icon"><i class="flaticon-information"></i></span>
+                            <span class="menu-title">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/accounts/login/" class="nav-link">
+                            <span class="icon"><i class="flaticon-user"></i></span>
+                            <span class="menu-title">Login</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title"> Blog Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/" class="nav-link">
+                            <span class="icon"><i class="flaticon-friends"></i></span>
+                            <span class="menu-title">Forum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/events/" class="nav-link">
+                            <span class="icon"><i class="flaticon-calendar"></i></span>
+                            <span class="menu-title">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/careers/gis/data-science/learning/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title">Learning</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/business/product/marketplace/" class="nav-link">
+                            <span class="icon"><i class="flaticon-online-shopping"></i></span>
+                            <span class="menu-title">Marketplace</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+
+        <!-- ZUst End -->
+
+
+        <!-- ======= Header ======= -->
+
+
+
+
+        <p id="blue-nav"></p>
+
+
+
+
+
+        <div id="map">
+            <!-- In the message partials we configure what gets displayed in our messages -->
+            <!-- We check if there is  a msessge -->
+
+
+
+            <!-- loader -->
+            <h1 id="load">Map Data Loading... <br> Please wait...</h1>
+            <div id="ring" class="ring"> </div>
+
+            <!-- controls -->
+
+            <!-- leaflet  fullscreen -->
+            <div class="leaflet-control switch-full-screen tip-left" style="top: 215;" onclick=fullScreenView()
+                data-toggle="tooltip" data-placement="left" title="View fullscreen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to coordinate -->
+            <div class="leaflet-control zoom-to-coordinate" id="zoom">
+                Latitude: <input type="text" name="lat" id="lat" />
+                Longitude: <input type="text" name="lng" id="lng" />
+                <input type="button" onclick="zoomTo()" value="ZoomToCoordinate"
+                    style="background-color:#4169e1; color : white;" />
+            </div>
+
+            <!-- Zoom to  cordinate Icon -->
+            <div class="leaflet-control zoom-to-coord-icon tip-left" onclick="showZoomTo()" data-toggle="tooltip"
+                data-placement="left" title="Zoom to coordinate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-globe2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to Map center point -->
+            <div class="leaflet-control zoom-to-center-point tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to map center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                </svg>
+            </div>
+
+            <!-- Zoom to my current position -->
+            <div class="leaflet-control zoom-to-location tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to my location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+            </div>
+
+            <!-- open side bar -->
+            <div class="leaflet-control open-side-bar tip-left" data-toggle="tooltip" data-placement="left"
+                title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z" />
+                </svg>
+            </div>
+
+            <!-- open bottom panel -->
+            <div class="leaflet-control open-bottom-panel tip-left" onclick="showBottomPanel()" data-toggle="tooltip"
+                data-placement="left" title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+                </svg>
+            </div>
+            <!-- Auto width -->
+            <button class="leaflet-control" id="download-data"
+                onclick="exportTableToCSV('environmental_pollution_data.csv')"><i class="fa fa-download"></i> Download
+                <span id="count"></span> Records</button>
+            <!-- <button class="leaflet-control" id="download-data2" ><span id = "count"></span> Towers</button> -->
+
+            <!-- Add new data -->
+            <div class=" leaflet-control add-data tip-left" id="add-data"><a
+                    href="/geoportal/add_environmental_pollution/"><button class="btn btn-info"> Add data </button></a>
+            </div>
+
+            <!-- Map coordinates display -->
+            <div class="leaflet-control fixed-bottom" id="fixed-bottom"> </div>
+            <div class="leaflet-control map-coordinate">
+                <div class="coordinate"></div>
+            </div>
+
+
+            <!-- controls end -->
+
+            <!-- ############################################ -->
+
+            <!-- Sidebar -->
+            <div id="div1" style="display:none">
+                <div id="sidebar">
+                    <div id="filter" class="col-xs-12">
+                        <div id="filterLabel" class=" text-center col-xs-12">
+                            <h4>FILTER BY ATTRIBUTES</h4>
+                        </div>
+
+                        <!-- Vantage -->
+
+
+                        <!-- Disease -->
+
+
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Pollution Type</summary>
+                            <div class="inputs" id="Pollution">
+                                <input type="checkbox" id="checkAll_pollution_type" name="checkAll_pollution_type"
+                                    value="Check All" onclick="togglePollutionCheckboxes()" checked="true">
+                                <label for="checkAll_pollution_type">Check All</label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel" value="Stagnant Water"
+                                    checked="true">
+                                <label for="Stagnant Water">
+                                    Stagnant Water
+                                    <span class="icon" style="color: white;"><i
+                                            class="fa-solid fa-house-flood-water"></i></span>
+
+                                </label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel"
+                                    value="Dirty or blocked drainage (gutters)" checked="true">
+                                <label for="Dirty or blocked drainage (gutters)">
+                                    Dirty or blocked drainage (gutters)
+                                    <span class="icon" style="color: white;"><i
+                                            class="fa-solid fa-glass-whiskey"></i></span>
+
+                                </label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel" value="Open Refuse Dump"
+                                    checked="true">
+                                <label for="Open Refuse Dump">
+                                    Open Refuse Dump
+                                    <span class="icon" style="color: white;"><i
+                                            class="fa-solid fa-biohazard"></i></span>
+
+                                </label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel"
+                                    value="Overflowing Refuse Container" checked="true">
+                                <label for="Overflowing Refuse Container">
+                                    Overflowing Refuse Container
+                                    <span class="icon" style="color: white;"><i class="fa-solid fa-dumpster"></i></span>
+
+                                </label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel" value="Open defecation area"
+                                    checked="true">
+                                <label for="Open defecation area">
+                                    Open defecation area
+                                    <span class="icon" style="color: white;"><i class="fa-solid fa-poop"></i></span>
+
+                                </label>
+                                <br>
+
+                                <input type="checkbox" class="pollution_type" name="Sel" value="Others" checked="true">
+                                <label for="Others">
+                                    Others
+                                    <span class="icon" style="color: white;"><i
+                                            class="fa-solid fa-trash-can"></i></span>
+
+                                </label>
+                                <br>
+
+
+                            </div>
+                        </details>
+
+
+
+
+                        <!-- Record Time Class -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">Record Class</summary>
+
+                            <div class="inputs" id="Time Class">
+                                <input type="checkbox" class="time_class" name="Sel" value="Current" checked="true">
+                                <label for="Current">Current (Less than 1 month) <i class="fa-solid fa-location-dot"
+                                        style="color: red;"></i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Recent" checked="true">
+                                <label for="Recent">Recent (Less than 6 months) <i class="fa-solid fa-location-dot"
+                                        style="color: rgb(119, 214, 119);"></i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Sometime ago"
+                                    checked="true">
+                                <label for="Sometime ago">Old (6 months or more) <i class="fa-solid fa-location-dot"
+                                        style="color: white;"></i></label>
+                            </div>
+                        </details>
+
+
+
+
+
+
+                        <button type="button" class="btn btn-success col-xs-12" id="filter-button">Update
+                            Selection</button>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ############################################ -->
+
+    </div>
+
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+
+
+
+
+
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/static/vendor/swiper/swiper-bundle.min.js.map"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/static/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/dist/main.js"></script>
+
+    <!-- Links of JS files -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/assets/js/jquery-ui.min.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/wow.min.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Mapscripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"
+        integrity="sha512-Oj9plGLST4IMXFXDfqMdTP+gSInbodkyno117PSjo5R08eu6TdzY9WPnnwQZGx2O2lG/kN0MzQk95ulWsRFuLA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- begin libraries -->
+
+
+    <!--    *****  Begin Leaflet.Draw-->
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="/static/lib/leaflet.geometryutil.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.draw.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.Draw.Event.js"></script>
+    <link rel="stylesheet" href="/static/lib/leaflet-draw/leaflet.draw.css" />
+
+    <script src="/static/lib/leaflet-draw/Toolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/Tooltip.js"></script>
+
+    <script src="/static/lib/leaflet-draw/ext/GeometryUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LatLngUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LineUtil.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polygon.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polyline.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/TouchEvents.js"></script>
+
+    <script src="/static/lib/leaflet-draw/draw/DrawToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Feature.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Marker.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+    <script src="/static/lib/leaflet-draw/edit/EditToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="/static/lib/leaflet-draw/Control.Draw.js"></script>
+
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Poly.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Marker.js"></script>
+
+    <!--    ******  End of Lealet Draw-->
+    <script type="text/javascript" src="/static/lib/leaflet.browser.print.min.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet-measure.js"></script>
+
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet.markercluster.js"></script>
+    <script type="text/javascript"
+        src="/static/lib/Leaflet.StyledLayerControl-master/src/styledLayerControl.js"></script>
+    <script src="/static/lib/Control-Sidebar.js"></script>
+    <script src="/static/dist/supply_chain_examples.js"></script>
+
+    <script src="/static/lib/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrSb7Uq81AMmOIJMozrW6j8wYirtQhyiY&libraries=geometry,places"></script> -->
+
+
+
+    <!-- end libraries -->
+
+
+    <script>
+
+        var customOptions =
+        {
+            'maxWidth': '200',
+            'className': 'lf-custom'
+        }
+
+        // Convert the queryset to GeoJSON format
+
+        var pollutionGeojson = {
+            "type": "FeatureCollection",
+            "features": [
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9878517, 7.25378]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "A frontage of my house been used by people for open defecation",
+                        "time_created": "Nov. 29, 2023, 8:55 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_sQhIzIQ.png",
+                        "latitude": "7.25378",
+                        "longitude": "9.9878517"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9880884, 7.2537779]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "An open place behind my compound used for open dedications",
+                        "time_created": "Nov. 29, 2023, 4:09 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_gIYR72D.png",
+                        "latitude": "7.2537779",
+                        "longitude": "9.9880884"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.987755, 7.2531733]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "Dump refuse",
+                        "time_created": "Dec. 14, 2023, 4:32 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_cx9Ecys.png",
+                        "latitude": "7.2531733",
+                        "longitude": "9.987755"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.613238290293436, 6.472619993488221]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "It’s contaminated with human, animal feaces and wastes and it’s not safe for drinking, cooking and bathing",
+                        "time_created": "July 8, 2023, 11:40 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_VPtX8Bz.png",
+                        "latitude": "6.472619993488221",
+                        "longitude": "7.613238290293436"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1076008, 6.258828]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "The refuse dump obstruct movement on the road",
+                        "time_created": "July 14, 2023, 2:02 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_Jd2rK1s.png",
+                        "latitude": "6.258828",
+                        "longitude": "7.1076008"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9819655, 7.2523714]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "Almost every region of my community is littered with refuse",
+                        "time_created": "Nov. 29, 2023, 6:13 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_E5hYlHL.png",
+                        "latitude": "7.2523714",
+                        "longitude": "9.9819655"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068710319999998, 6.199302669999998]
+                    },
+                    "properties": {
+                        "pollution_type": "Overflowing Refuse Container",
+                        "description": "Dirty refuse",
+                        "time_created": "July 10, 2023, 9:07 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_gf1lTYP.png",
+                        "latitude": "6.199302669999998",
+                        "longitude": "7.068710319999998"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1077184, 6.2588987]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "It&#x27;s causing us not to have a fresh aeration. And it&#x27;s block the main road",
+                        "time_created": "July 14, 2023, 2:26 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_qIdi9eX.png",
+                        "latitude": "6.2588987",
+                        "longitude": "7.1077184"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.241157511118689, 6.515451385202833]
+                    },
+                    "properties": {
+                        "pollution_type": "Others",
+                        "description": "Dump of refuse",
+                        "time_created": "Nov. 27, 2023, 9:36 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_3TeLFZJ.png",
+                        "latitude": "6.515451385202833",
+                        "longitude": "3.241157511118689"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.987755, 7.2531733]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "Dump refuse",
+                        "time_created": "Dec. 14, 2023, 4:32 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_hYXlpFO.png",
+                        "latitude": "7.2531733",
+                        "longitude": "9.987755"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9851102, 7.2486424]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "Am open area used for dedication in my area",
+                        "time_created": "Dec. 13, 2023, 3:49 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_t76mdwk.png",
+                        "latitude": "7.2486424",
+                        "longitude": "9.9851102"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9847608, 7.2556368]
+                    },
+                    "properties": {
+                        "pollution_type": "Overflowing Refuse Container",
+                        "description": "Overflowing refuse",
+                        "time_created": "Dec. 14, 2023, 2:18 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_OT1FeeD.png",
+                        "latitude": "7.2556368",
+                        "longitude": "9.9847608"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9927979, 7.2488056]
+                    },
+                    "properties": {
+                        "pollution_type": "Dirty or blocked drainage (gutters)",
+                        "description": "A dirty drainage close to my house needs sanitation",
+                        "time_created": "Nov. 29, 2023, 4:33 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_YNcXh7W.png",
+                        "latitude": "7.2488056",
+                        "longitude": "9.9927979"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9927979, 7.2491383]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "An open place in front of my house used for dedication by passersby",
+                        "time_created": "Dec. 4, 2023, 3:17 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_Mz2g0Qp.png",
+                        "latitude": "7.2491383",
+                        "longitude": "9.9927979"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0799306, 6.2011105]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "An overfilled soak away chamber.",
+                        "time_created": "July 16, 2023, 6:25 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_MLP8znY.png",
+                        "latitude": "6.2011105",
+                        "longitude": "7.0799306"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.075760359999998, 6.219018929999997]
+                    },
+                    "properties": {
+                        "pollution_type": "Overflowing Refuse Container",
+                        "description": "",
+                        "time_created": "July 10, 2023, 10:58 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_x9awuB7.png",
+                        "latitude": "6.219018929999997",
+                        "longitude": "7.075760359999998"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9868574, 7.2452772]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "An open field besides my compound used for open dedication by people",
+                        "time_created": "Dec. 1, 2023, 6:34 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_vihMpke.png",
+                        "latitude": "7.2452772",
+                        "longitude": "9.9868574"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9868574, 7.2522635]
+                    },
+                    "properties": {
+                        "pollution_type": "Overflowing Refuse Container",
+                        "description": "An over flowing refuse besides my house",
+                        "time_created": "Dec. 1, 2023, 6:05 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_AC8a4g3.png",
+                        "latitude": "7.2522635",
+                        "longitude": "9.9868574"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3326717, 6.5248054]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "Stagnant water is a pollution that pose health hazard on the inhabitants and cause illness, weakness and eventually death",
+                        "time_created": "Nov. 28, 2023, 11:38 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_R8y86rH.png",
+                        "latitude": "6.5248054",
+                        "longitude": "3.3326717"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3331224, 6.5249474]
+                    },
+                    "properties": {
+                        "pollution_type": "Others",
+                        "description": "",
+                        "time_created": "Nov. 28, 2023, 2:06 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_DnA9zd7.png",
+                        "latitude": "6.5249474",
+                        "longitude": "3.3331224"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.33691422805806, 6.5225225225225225]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "Stagnant water breeds mosquitoes. And also harboring disease vectors.",
+                        "time_created": "Nov. 28, 2023, 12:10 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_UkEw8LO.png",
+                        "latitude": "6.5225225225225225",
+                        "longitude": "3.33691422805806"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.085089304557945, 6.23307476138704]
+                    },
+                    "properties": {
+                        "pollution_type": "Dirty or blocked drainage (gutters)",
+                        "description": "It breeds mosquitoes.",
+                        "time_created": "Aug. 5, 2023, 7:42 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_7Uk81EX.png",
+                        "latitude": "6.23307476138704",
+                        "longitude": "7.085089304557945"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3012845, 6.5490321]
+                    },
+                    "properties": {
+                        "pollution_type": "Dirty or blocked drainage (gutters)",
+                        "description": "The drainage is filled with used plastic bags and other solid items such as stones, cans and PET bottles.",
+                        "time_created": "Nov. 28, 2023, 5:09 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_tEAe8Ol.png",
+                        "latitude": "6.5490321",
+                        "longitude": "3.3012845"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "pollution_type": "Open defecation area",
+                        "description": "An open place close to my house is used for definition by people",
+                        "time_created": "Nov. 29, 2023, 2:40 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_MMGAA8K.png",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.332767852376463, 6.524983272671185]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "Stagnant water pollution arises when still water accumulates pollutants, leading to concentrated environmental and health risks. Lack of water flow intensifies contaminant buildup, necessitating proactive measures for mitigation and prevention. Effective management is vital to safeguard ecosystems and public well-being.",
+                        "time_created": "Nov. 28, 2023, 8:16 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_nxBD5aF.png",
+                        "latitude": "6.524983272671185",
+                        "longitude": "3.332767852376463"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "pollution_type": "Dirty or blocked drainage (gutters)",
+                        "description": "A very dirty drainage thst needs clearing",
+                        "time_created": "Dec. 14, 2023, 4:48 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_SZqOmvV.png",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2471962]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "An open refuse dump in my area",
+                        "time_created": "Dec. 14, 2023, 3:09 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_3JUpuKd.png",
+                        "latitude": "7.2471962",
+                        "longitude": "9.9903517"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068710319999998, 6.199302669999998]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "",
+                        "time_created": "July 10, 2023, 8:57 a.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_tvGYL7w.png",
+                        "latitude": "6.199302669999998",
+                        "longitude": "7.068710319999998"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9927979, 7.2491383]
+                    },
+                    "properties": {
+                        "pollution_type": "Dirty or blocked drainage (gutters)",
+                        "description": "An open field in front of my house being used by passersby for defecation",
+                        "time_created": "Dec. 4, 2023, 3:35 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_LVQwk4s.png",
+                        "latitude": "7.2491383",
+                        "longitude": "9.9927979"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9863443, 7.2534526]
+                    },
+                    "properties": {
+                        "pollution_type": "Open Refuse Dump",
+                        "description": "",
+                        "time_created": "Dec. 14, 2023, 3:07 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_kpzwxCT.png",
+                        "latitude": "7.2534526",
+                        "longitude": "9.9863443"
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.113594529999998, 6.262739179999997]
+                    },
+                    "properties": {
+                        "pollution_type": "Stagnant Water",
+                        "description": "Due to the regular rain fall the environment has been full of stagnant dirty water that brings mosquitoes",
+                        "time_created": "Aug. 4, 2023, 8:52 p.m.",
+                        "time_class": "Old",
+                        "live_image": "/media/pollution/image_aunyatb.png",
+                        "latitude": "6.262739179999997",
+                        "longitude": "7.113594529999998"
+                    }
+                }
+
+
+            ]
+        };
+
+
+
+        //// Open defecation area
+        //var odIcon = L.icon({
+        //iconUrl: '/static/img/mapicons/od.svg',
+        // iconSize: [25, 35],
+        //});
+        //################# Download Map data ####################
+        function downloadCSV(csv, filename) {
+            var csvFile;
+            var downloadLink;
+
+            // CSV file
+            csvFile = new Blob([csv], { type: "text/csv" });
+
+            // Download link
+            downloadLink = document.createElement("a");
+
+            // File name
+            downloadLink.download = filename;
+
+            // Create a link to the file
+            downloadLink.href = window.URL.createObjectURL(csvFile);
+
+            // Hide download link
+            downloadLink.style.display = "none";
+
+            // Add the link to DOM
+            document.body.appendChild(downloadLink);
+
+            // Click download link
+            downloadLink.click();
+        }
+
+
+        function exportTableToCSV(filename) {
+            var csv = [];
+            // var textToSave = document.getElementById('fixed-bottom').innerHTML;
+            var rows = document.querySelectorAll("table tr");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+
+                for (var j = 0; j < cols.length; j++)
+                    row.push(cols[j].innerText);
+
+                csv.push(row.join(";"));
+            }
+
+            // Download CSV file
+            downloadCSV(csv.join("\n"), filename);
+        }
+
+        //  Pollutiom Choice Functions
+
+        // Pollution checkbox
+        function togglePollutionCheckboxes() {
+            var checkboxes = document.querySelectorAll('.pollution_type');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_pollution_type");
+            if (allChecked) {
+                checkAllButton.innerHTML = "Check all";
+            } else {
+                checkAllButton.innerHTML = "Uncheck all";
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+    <script src="/static/dist/markers.js"></script>
+    <script src="/static/dist/environmental_pollution.js"></script>
+
+
+
+
+    <script>
+        function mark_notification_as_read(notification_id) {
+            $.ajax({
+                url: "/message/notification/",
+                type: "POST",
+                data: {
+                    notification_id: notification_id,
+                    csrfmiddlewaretoken: "jkwMNyKgwK3jdZ0nvsryw0s6E4FuqCVCn0BjrFCUy9xC0dn4R96jdYjSq3aAkfrb",
+                },
+                success: function () {
+                    // Reload the page or update the UI to mark the notification as read
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        //
+
+        $(document).ready(function () {
+            // Add click event handler to the back-to-top button
+            $('.back-to-top').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the offset top position of the target element
+                var targetOffset = $('#blue-nav').offset().top;
+
+                // Scroll smoothly to the target element
+                $('html, body').animate({ scrollTop: targetOffset }, 800);
+            });
+        });
+
+        // Forum Like
+        $(".like").click(function (e) {
+            var id = this.id;
+            var href = "/forum/post/like/"; // set href directly
+            e.preventDefault();
+
+            $.ajax({
+                url: href,
+                data: {
+                    'likeId': id
+                },
+                success: function (response) {
+                    if (response.liked) {
+                        $('#likebtn' + id).html("Unlike | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "red")
+                    }
+                    else {
+                        $('#likebtn' + id).html("Like | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "green")
+                    }
+                }
+            })
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

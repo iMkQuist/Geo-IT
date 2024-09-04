@@ -1,0 +1,312 @@
+.member-img {
+    background-color: rgb(221, 219, 216);
+
+}
+
+.close {
+    background: none;
+    border: none;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.form-group {
+    box-shadow: 0 0 30px rgb(214 215 216 / 40%);
+    padding: 10px;
+}
+
+/*   Submit button   */
+
+.subm {
+    background: #106eea;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.edge {
+    background: #f005b6;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    right: 0%;
+    transition: 0.4s;
+    margin: 10px;
+    border-radius: 4px;
+
+}
+
+/*   Register form  errors */
+
+form li {
+    color: red;
+}
+
+.dropdown li {
+    padding: 1px;
+
+}
+
+/* bottom register or log in link*/
+.btm-form {
+    padding: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+#lgin {
+    margin-top: 5px;
+}
+
+.main-content-wrapper {
+    margin-top: 2px;
+    padding-top: 2px;
+}
+
+@media only screen and (max-width: 767px) {
+    .my-profile-inner-box .profile-info-box {
+        padding: 5px;
+        left: 12%;
+        width: 100%;
+
+    }
+
+}
+
+.name p {
+    color: #106eea;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title {
+    color: #106eea;
+    font-weight: 400;
+}
+
+.edit-button {
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    #top-post,
+    #top-post-inner {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: 767px) {
+    .right-sidebar-area {
+        display: block;
+    }
+}
+
+
+.job-title {
+    font-weight: lighter;
+    font-size: smaller;
+    font-family: "Open Sans", sans-serif;
+    color: #6B7C8F;
+}
+
+.blog-image {
+    float: right;
+    margin-left: 10px;
+    max-width: 20%;
+    max-height: 40%;
+    border: 2px solid #106eea;
+}
+
+.blog-detail-image {
+    margin: 4px;
+}
+
+.custom-file-button input[type=file] {
+    margin-left: -2px !important;
+}
+
+.custom-file-button input[type=file]::-webkit-file-upload-button {
+    display: none;
+}
+
+.custom-file-button input[type=file]::file-selector-button {
+    display: none;
+}
+
+.custom-file-button:hover label {
+    background-color: #dde0e3;
+    cursor: pointer;
+}
+
+.image-upload {
+    display: flex;
+    align-items: center;
+}
+
+.image-upload label {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.image-upload label i {
+    font-size: 24px;
+    color: #999;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.inputs label {
+    padding-right: 2%;
+    padding-bottom: 2%;
+
+}
+
+#add-data {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 465px;
+    background-color: white;
+    border: 2px solid blue;
+
+
+}
+
+.not-visible {
+    display: none;
+}
+
+#myid {
+    background-color: blue;
+    color: whitesmoke;
+}
+
+.fixed-bottom {
+
+    background-color: #106eea;
+}
+
+.thead {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+    color: blue;
+    margin: -2px;
+}
+
+.tdata {
+    background-color: #106eea;
+    color: whitesmoke;
+}
+
+.tdata:hover {
+    background-color: whitesmoke;
+    color: blue;
+}
+
+.wsmoke {
+    background-color: #f005b6;
+}
+
+#examples-container,
+.form-text li {
+    font-size: 12px;
+    color: #106eea;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.list_sc_examples {
+    background-color: wheat;
+    color: black;
+    width: 96%;
+    margin: auto;
+    border: 4px solid white;
+    border-radius: 2%;
+    font-size: 12px;
+}
+
+#sidebar {
+    background-color: #0dcaf0;
+}
+
+.custom-popup-style {
+
+    padding: 2px;
+
+}
+
+#product_image {
+
+    width: 800px;
+    max-height: fit-content;
+    border: 3px solid white;
+
+}
+
+.noti-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.msg-badge {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.frnd_req-badge {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    background-color: #3ED7FF;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+
+#cke_id_more_description,
+.cke_1,
+.cke {
+    width: 100% !important;
+}
+
+.main-content-wrapper {
+    padding-right: 2px;
+}
+
+.container {
+    background-color: white;
+    padding: 10px;
+}

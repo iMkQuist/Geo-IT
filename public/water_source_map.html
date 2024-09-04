@@ -1,0 +1,2767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Water Source Map | Geodatapals </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="styles/water_source_map.css">
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598551111391475"
+        crossorigin="anonymous"></script>
+
+    <!-- Remove Add Blockers -->
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-5598551111391475?ers=1"
+        nonce="KbNlHiNnc3EKTFZZgkiPgA"></script>
+    <script
+        nonce="KbNlHiNnc3EKTFZZgkiPgA">(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+    <!-- Open Graph meta tags -->
+
+    <meta property="og:title" content=" Water Availability Map | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/water_map.PNG" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Geodatapals water scarcity monitor" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+    <!-- Favicons -->
+    <base href="/" />
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" style="width:100px">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- Vendor CSS Files -->
+
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/dist/style.css">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- <link href="/static/css/profile.css" rel="stylesheet"> -->
+    <!-- Links of CSS files -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+        integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/static/assets/css/simplebar.min.css">
+    <link rel="stylesheet" href="/static/assets/css/metismenu.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/lib/leaflet-measure.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/lib/Control-Sidebar.css">
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/static/lib/Leaflet.StyledLayerControl-master/css/styledLayerControl.css">
+    <link rel="stylesheet" href="/static/lib/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+    <script src="/static/ckeditor/ckeditor-init.js"></script>
+    <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/dist/style.css">
+
+
+    <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Start Main Content Wrapper Area -->
+    <div class="main-content-wrapper d-flex flex-column" style="background-color: #e1e9e6;">
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <!-- <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@geodatapals.com"><span style="font-size: 12px;">info@geodatapals.com</span></a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span style="font-size: 11px;">+49 1520 3049167</span></i>
+
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/geodatapals" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div> -->
+        </section>
+
+        <!-- ZUSt start -->
+
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area" style="margin-bottom: 10px; background-color:#106eea">
+            <div class="main-responsive-nav">
+                <div class="main-responsive-menu">
+                    <div class="responsive-burger-menu d-lg-none d-block">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+                        <img src="/static/img/apple-touch-icon.png" style="height:50px; margin-top: -5px " alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="navbar-burger-menu m-auto">
+
+
+
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+
+                        <div class="search-box m-auto" id="search">
+                            <form method="get" action="/search" style="color:blue;">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="mRcBHnSOf4HDD0iJNw11GlKgxKtwppLWqxh8luKshtbWqeFq9dGMnjB2jJYCj2hv">
+                                <input type="text" name="q" class="input-search"
+                                    style="background-color:#106eea; border: 2px solid white" placeholder="Search...">
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <a href="/" class="home-btn"><i class="flaticon-home"
+                                        style="padding-bottom: 20%;"></i></a>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="dropdown language-option">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="flaticon-global"></i>
+                                        <span class="lang-name"></span>
+                                    </button>
+
+                                    <!-- <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uk.png" alt="flag">
+                                                Geoportal
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/china.png" alt="flag">
+                                                简体中文
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uae.png" alt="flag">
+                                                العربيّة
+                                            </a>
+                                        </div> -->
+
+                                    <div class="dropdown-menu language-dropdown-menu">
+
+                                        <a class="dropdown-item" href="/geoportal/water_source_map/"
+                                            style="background-color: #4169e1; color: white">
+
+                                            Water Availability Map
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                            Health Mapper
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/disease_map/">
+                                            Disease Tracker
+
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/environmental_pollution_map/">
+                                            Environmental Pollution Monitor
+
+                                        </a>
+                                        <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                            Supply Chain Mapper
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="others-option-for-responsive">
+                <!-- <div class="container" style="margin-top: 20px;"> -->
+                <div class="container" style="margin-top: -4px;">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <i class="bi bi-menu-down mobile-nav-toggle" style="color: #fff;">
+
+                            </i>
+                        </div>
+
+                    </div>
+
+                    <div class="container" style="background-color:#106eea;">
+                        <div class="option-inner">
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <a href="/" class="home-btn"><i class="flaticon-home"></i></a>
+                                </div>
+
+                                <!-- ####### Start Notifications -->
+
+                                <!-- ##### End Notifications  -->
+                                <div class="option-item">
+                                    <div class="dropdown language-option">
+                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="flaticon-global"></i>
+                                            <span class="lang-name"></span>
+                                        </button>
+
+
+                                        <div class="dropdown-menu language-dropdown-menu">
+
+                                            <a class="dropdown-item" href="/geoportal/water_source_map/"
+                                                style="background-color: #4169e1; color: white">
+
+                                                Water Availability Map
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                                Health Mapper
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/disease_map/">
+                                                Disease Tracker
+
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/environmental_pollution_map/">
+                                                Environmental Pollution Monitor
+
+                                            </a>
+                                            <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                                Supply Chain Mapper
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="option-item">
+                                    <div class="search-box" id="search">
+                                        <form method="get" action="/search" style="color:white;">
+                                            <input type="hidden" name="csrfmiddlewaretoken"
+                                                value="mRcBHnSOf4HDD0iJNw11GlKgxKtwppLWqxh8luKshtbWqeFq9dGMnjB2jJYCj2hv">
+                                            <!-- <input type="text" name="q" class="input-search" style="background-color:#106eea;color:white; border: 2px solid white" placeholder="Search..."> -->
+                                            <input type="text" name="q" class="input-search"
+                                                style="background-color:white;color:blue; border: 2px solid white"
+                                                placeholder="Search...">
+                                            <button type="submit"><i class="ri-search-line"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="responsive-burger-menu d-lg-none d-block">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="/accounts/register/" class="nav-link">
+                            <span class="icon"><i class="flaticon-information"></i></span>
+                            <span class="menu-title">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/accounts/login/" class="nav-link">
+                            <span class="icon"><i class="flaticon-user"></i></span>
+                            <span class="menu-title">Login</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title"> Blog Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/" class="nav-link">
+                            <span class="icon"><i class="flaticon-friends"></i></span>
+                            <span class="menu-title">Forum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/events/" class="nav-link">
+                            <span class="icon"><i class="flaticon-calendar"></i></span>
+                            <span class="menu-title">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/careers/gis/data-science/learning/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title">Learning</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/business/product/marketplace/" class="nav-link">
+                            <span class="icon"><i class="flaticon-online-shopping"></i></span>
+                            <span class="menu-title">Marketplace</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+
+        <!-- ZUst End -->
+
+
+        <!-- ======= Header ======= -->
+
+
+
+
+        <p id="blue-nav"></p>
+
+
+
+
+
+        <div id="map">
+            <!-- In the message partials we configure what gets displayed in our messages -->
+            <!-- We check if there is  a msessge -->
+
+
+
+            <!-- loader -->
+            <h1 id="load">Map Data Loading... <br> Please wait...</h1>
+            <div id="ring" class="ring"> </div>
+
+            <!-- controls -->
+
+            <!-- leaflet  fullscreen -->
+            <div class="leaflet-control switch-full-screen tip-left" style="top: 215;" onclick=fullScreenView()
+                data-toggle="tooltip" data-placement="left" title="View fullscreen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to coordinate -->
+            <div class="leaflet-control zoom-to-coordinate" id="zoom">
+                Latitude: <input type="text" name="lat" id="lat" />
+                Longitude: <input type="text" name="lng" id="lng" />
+                <input type="button" onclick="zoomTo()" value="ZoomToCoordinate"
+                    style="background-color:#4169e1; color : white;" />
+            </div>
+
+            <!-- Zoom to  cordinate Icon -->
+            <div class="leaflet-control zoom-to-coord-icon tip-left" onclick="showZoomTo()" data-toggle="tooltip"
+                data-placement="left" title="Zoom to coordinate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-globe2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to Map center point -->
+            <div class="leaflet-control zoom-to-center-point tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to map center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                </svg>
+            </div>
+
+            <!-- Zoom to my current position -->
+            <div class="leaflet-control zoom-to-location tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to my location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+            </div>
+
+            <!-- open side bar -->
+            <div class="leaflet-control open-side-bar tip-left" data-toggle="tooltip" data-placement="left"
+                title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z" />
+                </svg>
+            </div>
+
+            <!-- open bottom panel -->
+            <div class="leaflet-control open-bottom-panel tip-left" onclick="showBottomPanel()" data-toggle="tooltip"
+                data-placement="left" title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+                </svg>
+            </div>
+            <!-- Auto width -->
+            <button class="leaflet-control" id="download-data" onclick="exportTableToCSV('Water_source_data.csv')"><i
+                    class="fa fa-download"></i> Download <span id="count"></span> Records</button>
+            <!-- <button class="leaflet-control" id="download-data2" ><span id = "count"></span> Towers</button> -->
+
+            <!-- Add new data -->
+            <div class=" leaflet-control add-data tip-left" id="add-data"><a href="/geoportal/add_water_source"><button
+                        class="btn btn-info"> Add data </button></a></div>
+
+            <!-- Map coordinates display -->
+            <div class="leaflet-control fixed-bottom" id="fixed-bottom"> </div>
+            <div class="leaflet-control map-coordinate">
+                <div class="coordinate"></div>
+            </div>
+
+
+            <!-- controls end -->
+
+            <!-- ############################################ -->
+
+            <!-- Sidebar -->
+            <div id="div1" style="display:none">
+                <div id="sidebar">
+                    <div id="filter" class="col-xs-12">
+                        <div id="filterLabel" class=" text-center col-xs-12">
+                            <h4>FILTER BY ATTRIBUTES</h4>
+                        </div>
+
+                        <!-- Vantage -->
+
+
+                        <!-- Building Type -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">BUILDING TYPE</summary>
+
+                            <div class="inputs" id="Building_Types">
+                                <input type="checkbox" class="building_type" name="Sel" value="Residential"
+                                    checked="true">
+                                <label for="Residential">Residential</label>
+                                <input type="checkbox" class="building_type" name="Sel" value="Commercial"
+                                    checked="true">
+                                <label for="Commercial">Commercial</label>
+                                <input type="checkbox" class="building_type" name="Sel" value="Educational"
+                                    checked="true">
+                                <label for="Educational">Educational</label>
+                                <input type="checkbox" class="building_type" name="Sel" value="Industrial"
+                                    checked="true">
+                                <label for="Industrial">Industrial</label>
+                            </div>
+                        </details>
+
+                        <!-- Water Source-->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">WATER SOURCE</summary>
+
+                            <div class="inputs" id="Water_Source">
+                                <input type="checkbox" id="checkAll_water_sources" name="checkAll_water_sources"
+                                    value="Check All" onclick="toggleWaterSourcesCheckboxes()" checked="true">
+                                <label for="checkAll_water_sources">Check All</label>
+                                <br>
+                                <input type="checkbox" class="water_source" name="Sel" value="Borehole" checked="true">
+                                <label for="Borehole"> Borehole <i class="fa-solid fa-faucet-drip"
+                                        style="color: white;"></i></label>
+                                <input type="checkbox" class="water_source" name="Sel" value="Water Board"
+                                    checked="true">
+                                <label for="Water Board">Water Board <i class="fa-solid fa-shower"
+                                        style="color: white;"></i></label>
+                                <input type="checkbox" class="water_source" name="Sel" value="Well" checked="true">
+                                <label for="Well">From Well <i class="fa-solid fa-bore-hole"
+                                        style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="water_source" name="Sel" value="From Neighbour"
+                                    checked="true">
+                                <label for="From Neighbour">From Neighbour <i class="fa-solid fa-bucket"
+                                        style="color: white;"></i></label>
+                                <input type="checkbox" class="water_source" name="Sel" value="Buying from Vendors"
+                                    checked="true">
+                                <label for="Buying from Vendors">Buying from Vendors <i
+                                        class="fa-solid fa-truck-droplet" style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="water_source" name="Sel" value="From Stream"
+                                    checked="true">
+                                <label for="From Stream">From Stream <i class="fa-solid fa-tornado"
+                                        style="color: white;"></i></label>
+                                <input type="checkbox" class="water_source" name="Sel" value="None Available"
+                                    checked="true">
+                                <label for="None Available">None Available <i class="fa-solid fa-sun-plant-wilt"
+                                        style="color: white;"></i></label>
+
+                            </div>
+                        </details>
+
+                        <!-- Water in Compound -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">WATER IN COMPOUND</summary>
+
+                            <div class="inputs" id="Water_In_Compound">
+                                <input type="checkbox" class="water_in_compound" name="Sel" value="Yes" checked="true">
+                                <label for="Yes">Yes</label>
+                                <input type="checkbox" class="water_in_compound" name="Sel" value="No" checked="true">
+                                <label for="No">No</label>
+                            </div>
+                        </details>
+
+                        <!-- Tap Inside Running-->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">IN-HOUSE TAP RUNNING</summary>
+
+                            <div class="inputs" id="Tap_Inside_Running">
+                                <input type="checkbox" class="tap_inside_running" name="Sel" value="Yes" checked="true">
+                                <label for="Yes">Yes</label>
+                                <input type="checkbox" class="tap_inside_running" name="Sel" value="No" checked="true">
+                                <label for="No">No</label>
+                            </div>
+                        </details>
+
+
+                        <!-- Record Time Class -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">RECORD CLASS</summary>
+
+                            <div class="inputs" id="Time Class">
+                                <input type="checkbox" class="time_class" name="Sel" value="Current" checked="true">
+                                <label for="Current">Current (Less than 1 month) </i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Recent" checked="true">
+                                <label for="Recent">Recent (Less than 6 months) </i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Sometime ago"
+                                    checked="true">
+                                <label for="Sometime ago">Old (6 months or more) </i></label>
+                            </div>
+                        </details>
+
+
+
+
+
+
+                        <button type="button" class="btn btn-success col-xs-12" id="filter-button">Update
+                            Selection</button>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ############################################ -->
+
+    </div>
+
+    <meta property="og:title" content=" Water Availability Map | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/water_map.PNG" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Geodatapals water scarcity monitor" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+
+
+
+
+
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/static/vendor/swiper/swiper-bundle.min.js.map"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/static/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/dist/main.js"></script>
+
+    <!-- Links of JS files -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/assets/js/jquery-ui.min.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/wow.min.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Mapscripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"
+        integrity="sha512-Oj9plGLST4IMXFXDfqMdTP+gSInbodkyno117PSjo5R08eu6TdzY9WPnnwQZGx2O2lG/kN0MzQk95ulWsRFuLA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- begin libraries -->
+
+
+    <!--    *****  Begin Leaflet.Draw-->
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="/static/lib/leaflet.geometryutil.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.draw.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.Draw.Event.js"></script>
+    <link rel="stylesheet" href="/static/lib/leaflet-draw/leaflet.draw.css" />
+
+    <script src="/static/lib/leaflet-draw/Toolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/Tooltip.js"></script>
+
+    <script src="/static/lib/leaflet-draw/ext/GeometryUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LatLngUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LineUtil.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polygon.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polyline.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/TouchEvents.js"></script>
+
+    <script src="/static/lib/leaflet-draw/draw/DrawToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Feature.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Marker.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+    <script src="/static/lib/leaflet-draw/edit/EditToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="/static/lib/leaflet-draw/Control.Draw.js"></script>
+
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Poly.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Marker.js"></script>
+
+    <!--    ******  End of Lealet Draw-->
+    <script type="text/javascript" src="/static/lib/leaflet.browser.print.min.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet-measure.js"></script>
+
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet.markercluster.js"></script>
+    <script type="text/javascript"
+        src="/static/lib/Leaflet.StyledLayerControl-master/src/styledLayerControl.js"></script>
+    <script src="/static/lib/Control-Sidebar.js"></script>
+    <script src="/static/dist/supply_chain_examples.js"></script>
+
+    <script src="/static/lib/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrSb7Uq81AMmOIJMozrW6j8wYirtQhyiY&libraries=geometry,places"></script> -->
+
+
+
+    <!-- end libraries -->
+
+
+    <script>
+
+        var customOptions =
+        {
+            'maxWidth': '200',
+            'className': 'lf-custom'
+        }
+
+        // Convert the queryset to GeoJSON format
+        var waterSourcesGeojson = {
+            "type": "FeatureCollection",
+            "features": [
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9865079, 7.2519385]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 1, 2023, 4:38 p.m.",
+                        "latitude": "7.2519385",
+                        "longitude": "9.9865079",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068587796320368, 6.216216216216216]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 8:48 a.m.",
+                        "latitude": "6.216216216216216",
+                        "longitude": "7.068587796320368",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.33273, 6.5251868]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 2 p.m.",
+                        "latitude": "6.5251868",
+                        "longitude": "3.33273",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2358327151679847, 6.4514401131407215]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 9:36 p.m.",
+                        "latitude": "6.4514401131407215",
+                        "longitude": "3.2358327151679847",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.8198367, 6.13865]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 8, 2023, 8:46 p.m.",
+                        "latitude": "6.13865",
+                        "longitude": "6.8198367",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3010619, 6.5502178]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 5:12 p.m.",
+                        "latitude": "6.5502178",
+                        "longitude": "3.3010619",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.91753, 6.04347]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 8, 2023, 1:50 p.m.",
+                        "latitude": "6.04347",
+                        "longitude": "6.91753",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 29, 2023, 2:42 p.m.",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1125536, 6.261317]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 13, 2023, 10:06 p.m.",
+                        "latitude": "6.261317",
+                        "longitude": "7.1125536",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.33691422805806, 6.5225225225225225]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 12:06 p.m.",
+                        "latitude": "6.5225225225225225",
+                        "longitude": "3.33691422805806",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0953993, 6.2480304]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 24, 2023, 8:48 a.m.",
+                        "latitude": "6.2480304",
+                        "longitude": "7.0953993",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2471962]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 3:12 p.m.",
+                        "latitude": "7.2471962",
+                        "longitude": "9.9903517",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9927979, 7.2491383]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 4, 2023, 3:24 p.m.",
+                        "latitude": "7.2491383",
+                        "longitude": "9.9927979",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3943156, 6.5485595]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 11:46 a.m.",
+                        "latitude": "6.5485595",
+                        "longitude": "3.3943156",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.881508976227493, 6.012862594803807]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 4, 2023, 6:28 p.m.",
+                        "latitude": "6.012862594803807",
+                        "longitude": "6.881508976227493",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1076008, 6.258828]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 1:58 p.m.",
+                        "latitude": "6.258828",
+                        "longitude": "7.1076008",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9851102, 7.2486424]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 13, 2023, 3:50 p.m.",
+                        "latitude": "7.2486424",
+                        "longitude": "9.9851102",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.137886, 6.2686538]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 12:27 p.m.",
+                        "latitude": "6.2686538",
+                        "longitude": "7.137886",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2513253599999987, 6.6124029099999975]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 9:04 a.m.",
+                        "latitude": "6.6124029099999975",
+                        "longitude": "3.2513253599999987",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9880705, 7.2511492]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 8:15 p.m.",
+                        "latitude": "7.2511492",
+                        "longitude": "9.9880705",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0994352, 6.245998]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 7:31 a.m.",
+                        "latitude": "6.245998",
+                        "longitude": "7.0994352",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.113594529999998, 6.262739179999997]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 4, 2023, 8:47 p.m.",
+                        "latitude": "6.262739179999997",
+                        "longitude": "7.113594529999998",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2357892957047363, 6.45148336190848]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 11:09 a.m.",
+                        "latitude": "6.45148336190848",
+                        "longitude": "3.2357892957047363",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.342985, 6.6517954]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 13, 2023, 2:26 p.m.",
+                        "latitude": "6.6517954",
+                        "longitude": "3.342985",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.8908289, 6.7792313]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 24, 2023, 12:24 p.m.",
+                        "latitude": "6.7792313",
+                        "longitude": "3.8908289",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1802074, 8.9800031]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 2:20 p.m.",
+                        "latitude": "8.9800031",
+                        "longitude": "7.1802074",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0890762, 6.2335449]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 13, 2023, 8:49 p.m.",
+                        "latitude": "6.2335449",
+                        "longitude": "7.0890762",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1162541, 6.2543428]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 17, 2023, 11:31 a.m.",
+                        "latitude": "6.2543428",
+                        "longitude": "7.1162541",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4572128, 8.9712936]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 5, 2023, 3:36 p.m.",
+                        "latitude": "8.9712936",
+                        "longitude": "7.4572128",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5060529, 6.417214]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 10, 2023, 9:59 p.m.",
+                        "latitude": "6.417214",
+                        "longitude": "7.5060529",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.114572, 6.2583221]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 13, 2023, 10:08 p.m.",
+                        "latitude": "6.2583221",
+                        "longitude": "7.114572",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1088533, 6.2597184]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 2:03 p.m.",
+                        "latitude": "6.2597184",
+                        "longitude": "7.1088533",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2411389039315868, 6.515416728365652]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 27, 2023, 9:37 a.m.",
+                        "latitude": "6.515416728365652",
+                        "longitude": "3.2411389039315868",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068710319999998, 6.199302669999998]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 10, 2023, 8:59 a.m.",
+                        "latitude": "6.199302669999998",
+                        "longitude": "7.068710319999998",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1077193, 6.2588996]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 2:21 p.m.",
+                        "latitude": "6.2588996",
+                        "longitude": "7.1077193",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.100211414501531, 5.926195885305358]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 5:30 p.m.",
+                        "latitude": "5.926195885305358",
+                        "longitude": "7.100211414501531",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3327655699999985, 6.525003909999997]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 7:08 a.m.",
+                        "latitude": "6.525003909999997",
+                        "longitude": "3.3327655699999985",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.987755, 7.2531733]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 4:33 p.m.",
+                        "latitude": "7.2531733",
+                        "longitude": "9.987755",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1801909, 8.9800083]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 2:01 p.m.",
+                        "latitude": "8.9800083",
+                        "longitude": "7.1801909",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9847608, 7.2556368]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 1:48 p.m.",
+                        "latitude": "7.2556368",
+                        "longitude": "9.9847608",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3519851595285446, 6.468443687103744]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 17, 2023, 10:45 a.m.",
+                        "latitude": "6.468443687103744",
+                        "longitude": "3.3519851595285446",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7961994, 51.26796349999999]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 26, 2023, 1:01 p.m.",
+                        "latitude": "51.2679635",
+                        "longitude": "6.7961994",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1791944, 8.9785209]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 2:19 p.m.",
+                        "latitude": "8.9785209",
+                        "longitude": "7.1791944",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5097995, 6.4376513]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 11, 2023, 8:03 a.m.",
+                        "latitude": "6.4376513",
+                        "longitude": "7.5097995",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0888444, 6.2334263]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 27, 2023, 9:02 a.m.",
+                        "latitude": "6.2334263",
+                        "longitude": "7.0888444",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.074551, 6.1978879]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 6:21 p.m.",
+                        "latitude": "6.1978879",
+                        "longitude": "7.074551",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0150496, 5.7524733]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 2:25 p.m.",
+                        "latitude": "5.7524733",
+                        "longitude": "7.0150496",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.065524976499732, 6.222122316520006]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 5:26 p.m.",
+                        "latitude": "6.222122316520006",
+                        "longitude": "7.065524976499732",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.113594529999998, 6.262739179999997]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 4, 2023, 8:48 p.m.",
+                        "latitude": "6.262739179999997",
+                        "longitude": "7.113594529999998",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9863443, 7.2534526]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 3:09 p.m.",
+                        "latitude": "7.2534526",
+                        "longitude": "9.9863443",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1054895, 6.2554774]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 17, 2023, 11:55 a.m.",
+                        "latitude": "6.2554774",
+                        "longitude": "7.1054895",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7962173, 51.2679701]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Current",
+                        "time_created": "July 20, 2024, 10:13 a.m.",
+                        "latitude": "51.2679701",
+                        "longitude": "6.7962173",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.6132290249741335, 6.472577930952209]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 8, 2023, 11:25 a.m.",
+                        "latitude": "6.472577930952209",
+                        "longitude": "7.6132290249741335",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0016103037284365, 5.466609887243238]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 2:35 p.m.",
+                        "latitude": "5.466609887243238",
+                        "longitude": "7.0016103037284365",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.235831489999997, 6.451442240000001]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 27, 2023, 9:05 a.m.",
+                        "latitude": "6.451442240000001",
+                        "longitude": "3.235831489999997",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9865079, 7.249277]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 29, 2023, 6:15 p.m.",
+                        "latitude": "7.249277",
+                        "longitude": "9.9865079",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1801671, 8.9800234]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 1:42 p.m.",
+                        "latitude": "8.9800234",
+                        "longitude": "7.1801671",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9878383, 7.2537933]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 29, 2023, 9:02 a.m.",
+                        "latitude": "7.2537933",
+                        "longitude": "9.9878383",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9875562, 7.2489212]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 1, 2023, 6:23 p.m.",
+                        "latitude": "7.2489212",
+                        "longitude": "9.9875562",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.075760359999998, 6.219018929999997]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 10, 2023, 10:56 p.m.",
+                        "latitude": "6.219018929999997",
+                        "longitude": "7.075760359999998",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9880705, 7.2511492]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 8:02 p.m.",
+                        "latitude": "7.2511492",
+                        "longitude": "9.9880705",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9880834, 7.2538065]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 29, 2023, 4:10 p.m.",
+                        "latitude": "7.2538065",
+                        "longitude": "9.9880834",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3922833, 6.7371808]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 11:13 a.m.",
+                        "latitude": "6.7371808",
+                        "longitude": "3.3922833",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3327273, 6.5251629]
+                    },
+                    "properties": {
+                        "building_type": "Industrial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 1:36 p.m.",
+                        "latitude": "6.5251629",
+                        "longitude": "3.3327273",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.119413202761984, 5.787812610588119]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 8:47 a.m.",
+                        "latitude": "5.787812610588119",
+                        "longitude": "6.119413202761984",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3327655699999985, 6.525003909999997]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 7:07 a.m.",
+                        "latitude": "6.525003909999997",
+                        "longitude": "3.3327655699999985",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7962377, 51.2679711]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Recent",
+                        "time_created": "May 5, 2024, 9:13 p.m.",
+                        "latitude": "51.2679711",
+                        "longitude": "6.7962377",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4707734, 9.0077857]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Current",
+                        "time_created": "July 12, 2024, 10:17 a.m.",
+                        "latitude": "9.0077857",
+                        "longitude": "7.4707734",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9854494, 7.2562774]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 1, 2023, 5:04 p.m.",
+                        "latitude": "7.2562774",
+                        "longitude": "9.9854494",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.06549815387114, 6.2217480484958765]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 5:26 p.m.",
+                        "latitude": "6.2217480484958765",
+                        "longitude": "7.06549815387114",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068587796320368, 6.216216216216216]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 8:49 a.m.",
+                        "latitude": "6.216216216216216",
+                        "longitude": "7.068587796320368",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3012039, 6.5501535]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 5:11 p.m.",
+                        "latitude": "6.5501535",
+                        "longitude": "3.3012039",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0473236, 6.2605465]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 13, 2023, 3:19 p.m.",
+                        "latitude": "6.2605465",
+                        "longitude": "7.0473236",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.878874762495973, 6.016595845511528]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 4, 2023, 6:28 p.m.",
+                        "latitude": "6.016595845511528",
+                        "longitude": "6.878874762495973",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-121.9552356, 37.354107899999995]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 8:11 p.m.",
+                        "latitude": "37.354107899999995",
+                        "longitude": "-121.9552356",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9882533, 7.2536517]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Nov. 29, 2023, 4:34 p.m.",
+                        "latitude": "7.2536517",
+                        "longitude": "9.9882533",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4998069106172816, 6.418059771523465]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 7:56 p.m.",
+                        "latitude": "6.418059771523465",
+                        "longitude": "7.4998069106172816",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.9038808, 6.777791]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 24, 2023, 12:11 p.m.",
+                        "latitude": "6.777791",
+                        "longitude": "3.9038808",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1378886, 6.2686557]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 17, 2023, 11:24 a.m.",
+                        "latitude": "6.2686557",
+                        "longitude": "7.1378886",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7962318, 51.2679523]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Recent",
+                        "time_created": "Feb. 13, 2024, 10:07 p.m.",
+                        "latitude": "51.2679523",
+                        "longitude": "6.7962318",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0765683, 6.1975316]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 6:21 p.m.",
+                        "latitude": "6.1975316",
+                        "longitude": "7.0765683",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.2101813, 8.977575]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 8:01 p.m.",
+                        "latitude": "8.977575",
+                        "longitude": "7.2101813",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9791702, 7.2514348]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 12:22 a.m.",
+                        "latitude": "7.2514348",
+                        "longitude": "9.9791702",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0147326, 5.7646833]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 2:28 p.m.",
+                        "latitude": "5.7646833",
+                        "longitude": "7.0147326",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [11.3360717, 8.9478783]
+                    },
+                    "properties": {
+                        "building_type": "Commercial",
+                        "water_source": "Well",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 5, 2023, 9:49 p.m.",
+                        "latitude": "8.9478783",
+                        "longitude": "11.3360717",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.077996989696825, 6.03038958190604]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 16, 2023, 6:01 p.m.",
+                        "latitude": "6.03038958190604",
+                        "longitude": "7.077996989696825",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7962099, 51.2679682]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Dec. 2, 2023, 1:30 p.m.",
+                        "latitude": "51.2679682",
+                        "longitude": "6.7962099",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.921752, 6.0228706]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Buying from Vendors",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Aug. 5, 2023, 2:41 p.m.",
+                        "latitude": "6.0228706",
+                        "longitude": "6.921752",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.235723317193473, 6.451261853570212]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 11:11 a.m.",
+                        "latitude": "6.451261853570212",
+                        "longitude": "3.235723317193473",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "None Available",
+                        "water_in_compound": "No",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "Dec. 14, 2023, 4:21 p.m.",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3332066, 6.5252455]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 28, 2023, 11:31 a.m.",
+                        "latitude": "6.5252455",
+                        "longitude": "3.3332066",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5813847995864005, 9.000798403954962]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Aug. 4, 2023, 7:01 p.m.",
+                        "latitude": "9.000798403954962",
+                        "longitude": "7.5813847995864005",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3916773, 6.5385477]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Borehole",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "Yes",
+                        "time_class": "Old",
+                        "time_created": "Nov. 25, 2023, 8:55 p.m.",
+                        "latitude": "6.5385477",
+                        "longitude": "3.3916773",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4998069106172816, 6.418059771523465]
+                    },
+                    "properties": {
+                        "building_type": "Residential",
+                        "water_source": "Well",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 7:58 p.m.",
+                        "latitude": "6.418059771523465",
+                        "longitude": "7.4998069106172816",
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3386595, 9.0426091]
+                    },
+                    "properties": {
+                        "building_type": "Educational",
+                        "water_source": "Water Board",
+                        "water_in_compound": "Yes",
+                        "tap_inside_running": "No",
+                        "time_class": "Old",
+                        "time_created": "July 14, 2023, 8:09 p.m.",
+                        "latitude": "9.0426091",
+                        "longitude": "7.3386595",
+                    }
+                }
+
+
+            ]
+        };
+
+        // ################### Map Icons #######################
+
+
+        //################# Download Map data ####################
+        function downloadCSV(csv, filename) {
+            var csvFile;
+            var downloadLink;
+
+            // CSV file
+            csvFile = new Blob([csv], { type: "text/csv" });
+
+            // Download link
+            downloadLink = document.createElement("a");
+
+            // File name
+            downloadLink.download = filename;
+
+            // Create a link to the file
+            downloadLink.href = window.URL.createObjectURL(csvFile);
+
+            // Hide download link
+            downloadLink.style.display = "none";
+
+            // Add the link to DOM
+            document.body.appendChild(downloadLink);
+
+            // Click download link
+            downloadLink.click();
+        }
+
+
+        function exportTableToCSV(filename) {
+            var csv = [];
+            // var textToSave = document.getElementById('fixed-bottom').innerHTML;
+            var rows = document.querySelectorAll("table tr");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+
+                for (var j = 0; j < cols.length; j++)
+                    row.push(cols[j].innerText);
+
+                csv.push(row.join(","));
+            }
+
+            // Download CSV file
+            downloadCSV(csv.join("\n"), filename);
+        }
+
+        // Water Sources checkbox
+        function toggleWaterSourcesCheckboxes() {
+            var checkboxes = document.querySelectorAll('.water_source');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_water_sources");
+
+        }
+    </script>
+
+
+
+    <script src="/static/dist/markers.js"></script>
+    <script src="/static/dist/water_avl.js"></script>
+
+
+
+
+    <script>
+        function mark_notification_as_read(notification_id) {
+            $.ajax({
+                url: "/message/notification/",
+                type: "POST",
+                data: {
+                    notification_id: notification_id,
+                    csrfmiddlewaretoken: "mRcBHnSOf4HDD0iJNw11GlKgxKtwppLWqxh8luKshtbWqeFq9dGMnjB2jJYCj2hv",
+                },
+                success: function () {
+                    // Reload the page or update the UI to mark the notification as read
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        //
+
+        $(document).ready(function () {
+            // Add click event handler to the back-to-top button
+            $('.back-to-top').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the offset top position of the target element
+                var targetOffset = $('#blue-nav').offset().top;
+
+                // Scroll smoothly to the target element
+                $('html, body').animate({ scrollTop: targetOffset }, 800);
+            });
+        });
+
+        // Forum Like
+        $(".like").click(function (e) {
+            var id = this.id;
+            var href = "/forum/post/like/"; // set href directly
+            e.preventDefault();
+
+            $.ajax({
+                url: href,
+                data: {
+                    'likeId': id
+                },
+                success: function (response) {
+                    if (response.liked) {
+                        $('#likebtn' + id).html("Unlike | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "red")
+                    }
+                    else {
+                        $('#likebtn' + id).html("Like | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "green")
+                    }
+                }
+            })
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

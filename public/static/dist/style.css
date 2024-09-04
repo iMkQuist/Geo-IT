@@ -1,0 +1,795 @@
+/* #map {
+  width: 100%;
+  height: 90vh;
+  bottom: 0px;
+  position: fixed;
+  margin-top: 0px;
+
+} */
+
+#map {
+    width: 100%;
+    height: 90vh;
+    bottom: 0px;
+    position: fixed;
+    border: 5px solid white;
+}
+
+
+@media (max-width: 700px) and (min-width: 1200px) {
+    #map {
+        top: 51px;
+        height: 96vh;
+
+    }
+}
+
+@media (max-width: 700px) {
+    #map {
+
+        top: 54px;
+        height: 92vh;
+
+    }
+
+}
+
+@media (min-width: 1367px) {
+    #map {
+
+        width: 90%;
+        left: 10%;
+
+
+    }
+
+}
+
+/* Map Buttons */
+
+.map-coordinate {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: #4169e1;
+    border: 1px solid black;
+    color: white;
+}
+
+
+.zoom-to-center-point {
+    position: absolute;
+    padding: 5px;
+    left: 10px;
+    top: 280px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+.zoom-to-location {
+    position: absolute;
+    padding: 5px;
+    right: 11px;
+    top: 420px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+
+
+.zoom-to-coordinate {
+    position: absolute;
+    background-color: white;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid blue;
+    padding: 2px;
+    margin-top: 2px;
+    color: blue;
+    font-weight: bold;
+    display: none;
+
+}
+
+.zoom-to-coord-icon {
+    position: absolute;
+    padding: 5px;
+    right: 11px;
+    top: 330px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+
+
+.switch-full-screen {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 375px;
+    background-color: white;
+    border: 2px solid blue;
+
+
+}
+
+.add-data {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 385px;
+    background-color: rgb(11, 248, 248);
+    border: 2px solid blue;
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .zoom-to-coordinate {
+        bottom: 10%;
+
+    }
+
+    #zoom {
+        display: none;
+    }
+
+}
+
+/*
+  .leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in { background-color: blue; color:white}
+  .leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-out { background-color: blue; color: white } */
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in {
+    border: 2px solid blue
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-out {
+    border: 2px solid blue
+}
+
+.leaflet-control-measure {
+    border: 2px solid blue
+}
+
+
+.leaflet-control-geocoder a,
+.leaflet-control-geocoder .leaflet-control-geocoder-icon {
+    border-bottom: none;
+    display: inline-block;
+    border: 2px solid blue;
+    width: 35px;
+    height: 37px;
+}
+
+#sidebar {
+    background-color: #4169e1;
+    float: right;
+}
+
+.leaflet-bar button {
+    color: blue;
+    border: 2px solid blue;
+    right: 11px;
+    top: 230px;
+}
+
+.open-side-bar {
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 285px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+#filterLabel {
+    color: white;
+    margin: 10px;
+}
+
+.errorMsg {
+    padding: 0;
+    text-align: center;
+
+}
+
+/* Vantage */
+
+
+#btnFindSite_AT,
+#btnFindSite_vt {
+    background-color: rgb(8, 178, 62);
+    color: white;
+}
+
+
+#divSiteData_vt {
+    background-color: rgb(0, 140, 255);
+    margin-top: 4px;
+    border-radius: 4px;
+    color: white;
+    /* overflow: scroll; */
+}
+
+#divSiteError_vt {
+    color: greenyellow;
+}
+
+
+#vantageDiv,
+#AmericanTDiv,
+#DFMGDiv,
+#vodafoneDiv,
+#TelekomDiv,
+#TelefonicaDiv {
+    background-color: rgb(0, 140, 255);
+    width: 100%;
+    height: 50%;
+    border-radius: 4px;
+    border: 2px solid whitesmoke;
+    border-top: 3px solid whitesmoke;
+    color: yellow;
+}
+
+
+@media (min-width: 1200px) {
+    #btnFindSite_vt {
+        padding-left: 3em;
+        padding-right: 3em;
+
+    }
+
+}
+
+.ui-autocomplete {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+
+#legend {
+    /* width:14px;
+      height:18px; */
+    background-color: white;
+}
+
+#divFilter_vf,
+#divFilter_vt {
+    padding: 10px;
+}
+
+/* var O2MarkerOptions = {
+      radius: 6,
+      fillColor: "#4169e1",
+      color: "white",
+      weight: 2,
+      opacity: 2,
+      fillOpacity: 0.8
+  }; */
+
+.dot_vf,
+.dot_tf,
+.dot_dt {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid white;
+}
+
+.dot_dt {
+    background-color: #ff00ff;
+}
+
+.dot_tf {
+    background-color: #4169e1;
+}
+
+.dot_vf {
+    background-color: red;
+}
+
+/*  Menu Dropdown*/
+
+.drpdown {
+    overflow: hidden;
+}
+
+.drpdown .drpbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 13px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: red;
+  } */
+
+.drpdown-content {
+    display: none;
+    position: absolute;
+    background-color: #810881;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.drpdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+.drpdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.drpdown:hover .drpdown-content {
+    display: block;
+}
+
+
+.logo p {
+    font-family: 'Cinzel Decorative', cursive;
+    display: block;
+    height: 50px;
+    padding-left: 5px;
+    color: whitesmoke;
+    top: -5px;
+}
+
+
+
+
+#db {
+    color: rgb(255, 255, 255);
+    font-family: 'Protocol', sans-serif;
+    font-weight: bold;
+    top: -5px;
+}
+
+#dbn {
+    /* color:#2EFD47; */
+    color: whitesmoke;
+
+}
+
+#ptitle {
+    font-size: 22px;
+}
+
+#phead {
+    font-size: 28px;
+}
+
+#pcomments {
+    font-size: 19px;
+}
+
+.postimg img {
+    height: 300px;
+    width: 500px;
+    padding-top: 10px;
+}
+
+#lgin {
+    color: white;
+}
+
+#lgin a:hover {
+    color: green;
+    background-color: white;
+}
+
+
+#lgin_nt {
+    color: white;
+    padding-right: 1px;
+}
+
+#topnv {
+    background-color: #4169e1;
+    color: white;
+}
+
+#menu a {
+    color: white;
+    font-size: 16px;
+}
+
+
+
+
+#myNavbar a:hover {
+    color: green;
+    background-color: white;
+}
+
+
+/* filter buttons */
+.btnfilt {
+    padding-top: 2px;
+    display: inline;
+    color: #810881;
+    margin-left: 0.5em;
+    margin-top: 2px;
+    margin-top: 2px;
+    background-color: white;
+
+
+}
+
+.btn-group {
+    margin: auto;
+    float: center;
+    margin-bottom: 5px;
+
+}
+
+#all_vf {
+    background-color: greenyellow;
+
+}
+
+
+/* http://bl.ocks.org/zross/47760925fcb1643b4225 */
+
+/* position: absolute;
+      padding: 5px;
+      left: 10px;
+      top: 280px;
+      background-color: white;
+      border: 2px solid blue; */
+
+#tableswitch {
+    position: absolute;
+    display: none;
+    /* padding: 5px; */
+    left: 5px;
+    bottom: 34%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border: 2px solid blue;
+    height: 50px;
+}
+
+.bar-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.bar-item:hover {
+    font-weight: bolder;
+    color: #4169e1;
+}
+
+.bar-line {
+    width: 1px;
+    height: 100%;
+    background-color: blue;
+    margin: 0 10px;
+}
+
+
+
+
+
+.fixed-bottom,
+#fixed-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 99%;
+    height: 30vh;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: rgba(0, 0, 0, .25);
+    border: 1px solid black;
+    color: white;
+    overflow: scroll;
+    z-index: 2300;
+}
+
+table th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: beige;
+    color: blue;
+    margin: -2px;
+}
+
+#myid:hover {
+    color: blue;
+    background-color: whitesmoke;
+}
+
+
+
+
+.open-bottom-panel {
+    position: absolute;
+    padding: 5px;
+    right: 11px;
+    top: 235px;
+    background-color: white;
+    border: 2px solid blue;
+}
+
+/* #thead{
+          position: fixed;
+          top: 78px; display:none;
+          background-color:white;
+          z-index: 2301;
+        } */
+
+#fixed-bottom,
+#tableswitch,
+#download-data,
+#download-data2 {
+    display: none;
+}
+
+#download-data {
+    position: absolute;
+    padding: 2px;
+    right: 11px;
+    top: 211px;
+    color: white;
+    background-color: #4169e1;
+    border: 1px solid white;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    z-index: 2301;
+}
+
+
+
+#selection {
+    margin-top: 10px;
+    margin-left: 5px;
+
+}
+
+#columns {
+    background-color: #4169e1;
+    margin: 10px;
+}
+
+#filt {
+    background-color: #4169e1;
+    margin: 12px;
+    color: greenyellow;
+}
+
+#eq {
+    margin: 12px;
+}
+
+/* .Geotype, .Site_Type{
+          display: none;
+      } */
+
+#Attributes {
+    right: 50%;
+}
+
+#secTitle {
+    color: whitesmoke;
+}
+
+
+
+/* css to customize Leaflet default styles  */
+.lf-custom .leaflet-popup-tip,
+.lf-custom .leaflet-popup-content-wrapper {
+    background: peru;
+    color: greenyellow;
+
+}
+
+.att-st {
+    color: yellow;
+
+}
+
+
+/* css to customize Leaflet default styles  */
+.business-lf-custom {
+    background: whitesmoke;
+    color: greenyellow;
+
+}
+
+.bus-att-st {
+    color: blueviolet;
+
+}
+
+#btnFindSite_vt {
+    margin-bottom: 10px;
+}
+
+#filter {
+    color: yellow;
+}
+
+.drpdown-content {
+    background-color: #4169e1;
+    z-index: 2000;
+}
+
+
+
+
+.ring {
+    border: 20px solid rgb(211, 211, 211);
+    position: absolute;
+    left: 45%;
+    border-radius: 50%;
+    border-top: 20px solid rgb(240, 237, 237);
+    /* red */
+    border-bottom: 20px solid #4169e1;
+    /* blue */
+    border-right: 20px solid rgb(240, 237, 237);
+    /* yellow */
+    border-left: 20px solid #4169e1;
+    /* green */
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#load {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* display sidebar content */
+
+.inputs input {
+    margin-left: 5px;
+}
+
+#vantageDiv:hover {
+    background-color: #4169e1;
+}
+
+.line-1 {
+    height: 2px;
+    background: white;
+}
+
+.drpdown-content {
+    z-index: 2302;
+}
+
+#filter-button,
+#filter-button1,
+#filter-button2,
+#filter-button3 {
+    background-color: rgb(8, 178, 62);
+    font-weight: bold;
+    font-size: larger;
+    /* border: 2px solid white; */
+    color: white;
+    width: 100%;
+}
+
+#filterLabel>h4 {
+    color: yellow;
+}
+
+#filter-button:hover,
+#filter-button1:hover,
+#filter-button2:hover,
+#filter-button3:hover {
+    background-color: green;
+}
+
+#filter-button:active {
+    background-color: green;
+}
+
+
+details {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    box-shadow: 0 .1rem 1rem -.5rem rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+summary {
+    padding: 1rem;
+    display: block;
+    padding-left: 2.2rem;
+    position: relative;
+    font-size: larger;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+
+summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .25s transform ease;
+}
+
+/* THE MAGIC 🧙‍♀️ */
+details[open]>summary:before {
+    transform: rotate(90deg);
+}
+
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details>ul {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+#TowerCos {
+    visibility: visible;
+}
+
+.invalid-feedback {
+    color: red;
+}
+
+#text {
+    display: none;
+}
+
+
+/* Layers pannel. Copy selector in developer tools */
+
+#map>div.leaflet-control-container>div.leaflet-top.leaflet-left>div>section {
+
+    background-color: #810881;
+    padding: 0%;
+
+}

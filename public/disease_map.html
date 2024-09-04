@@ -1,0 +1,3489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Disease Tracker | Geodatapals </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="styles/disease_map.css">
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598551111391475"
+        crossorigin="anonymous"></script>
+
+    <!-- Remove Add Blockers -->
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-5598551111391475?ers=1"
+        nonce="KbNlHiNnc3EKTFZZgkiPgA"></script>
+    <script
+        nonce="KbNlHiNnc3EKTFZZgkiPgA">(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+    <!-- Open Graph meta tags -->
+
+    <meta property="og:title" content=" Disease Tracker | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/disease_map.PNG" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Realtime Disease Tracker" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+    <!-- Favicons -->
+    <base href="/" />
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" style="width:100px">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- Vendor CSS Files -->
+
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/dist/style.css">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- <link href="/static/css/profile.css" rel="stylesheet"> -->
+    <!-- Links of CSS files -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+        integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/static/assets/css/simplebar.min.css">
+    <link rel="stylesheet" href="/static/assets/css/metismenu.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/lib/leaflet-measure.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/lib/Control-Sidebar.css">
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/static/lib/Leaflet.StyledLayerControl-master/css/styledLayerControl.css">
+    <link rel="stylesheet" href="/static/lib/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+    <script src="/static/ckeditor/ckeditor-init.js"></script>
+    <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/dist/style.css">
+
+
+    <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Start Main Content Wrapper Area -->
+    <div class="main-content-wrapper d-flex flex-column" style="background-color: #e1e9e6;">
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <!-- <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@geodatapals.com"><span style="font-size: 12px;">info@geodatapals.com</span></a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span style="font-size: 11px;">+49 1520 3049167</span></i>
+
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/geodatapals" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div> -->
+        </section>
+
+        <!-- ZUSt start -->
+
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area" style="margin-bottom: 10px; background-color:#106eea">
+            <div class="main-responsive-nav">
+                <div class="main-responsive-menu">
+                    <div class="responsive-burger-menu d-lg-none d-block">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+                        <img src="/static/img/apple-touch-icon.png" style="height:50px; margin-top: -5px " alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="navbar-burger-menu m-auto">
+
+
+
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+
+                        <div class="search-box m-auto" id="search">
+                            <form method="get" action="/search" style="color:blue;">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="n7Mq27QmrejIBX3GUEFeYTMRwvYA73B3rNRXGeI0tDN1obqnglkZFRDDiutG1G7C">
+                                <input type="text" name="q" class="input-search"
+                                    style="background-color:#106eea; border: 2px solid white" placeholder="Search...">
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <a href="/" class="home-btn"><i class="flaticon-home"
+                                        style="padding-bottom: 20%;"></i></a>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="dropdown language-option">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="flaticon-global"></i>
+                                        <span class="lang-name"></span>
+                                    </button>
+
+                                    <!-- <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uk.png" alt="flag">
+                                                Geoportal
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/china.png" alt="flag">
+                                                简体中文
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uae.png" alt="flag">
+                                                العربيّة
+                                            </a>
+                                        </div> -->
+
+                                    <div class="dropdown-menu language-dropdown-menu">
+                                        <a class="dropdown-item" href="/geoportal/disease_map/"
+                                            style="background-color: #4169e1; color: white">
+                                            Disease Tracker
+
+                                        </a>
+
+                                        <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                            Health Mapper
+                                        </a>
+
+                                        <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                            Water Availability Map
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/environmental_pollution_map/">
+                                            Environmental Pollution Monitor
+                                        </a>
+                                        <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                            Supply Chain Mapper
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="others-option-for-responsive">
+                <!-- <div class="container" style="margin-top: 20px;"> -->
+                <div class="container" style="margin-top: -4px;">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <i class="bi bi-menu-down mobile-nav-toggle" style="color: #fff;">
+
+                            </i>
+                        </div>
+
+                    </div>
+
+                    <div class="container" style="background-color:#106eea;">
+                        <div class="option-inner">
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <a href="/" class="home-btn"><i class="flaticon-home"></i></a>
+                                </div>
+
+                                <!-- ####### Start Notifications -->
+
+                                <!-- ##### End Notifications  -->
+                                <div class="option-item">
+                                    <div class="dropdown language-option">
+                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="flaticon-global"></i>
+                                            <span class="lang-name"></span>
+                                        </button>
+
+
+                                        <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="/geoportal/disease_map/"
+                                                style="background-color: #4169e1; color: white">
+                                                Disease Tracker
+
+                                            </a>
+
+                                            <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+                                                Health Mapper
+                                            </a>
+
+                                            <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                                Water Availability Map
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/environmental_pollution_map/">
+                                                Environmental Pollution Monitor
+                                            </a>
+                                            <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                                Supply Chain Mapper
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="option-item">
+                                    <div class="search-box" id="search">
+                                        <form method="get" action="/search" style="color:white;">
+                                            <input type="hidden" name="csrfmiddlewaretoken"
+                                                value="n7Mq27QmrejIBX3GUEFeYTMRwvYA73B3rNRXGeI0tDN1obqnglkZFRDDiutG1G7C">
+                                            <!-- <input type="text" name="q" class="input-search" style="background-color:#106eea;color:white; border: 2px solid white" placeholder="Search..."> -->
+                                            <input type="text" name="q" class="input-search"
+                                                style="background-color:white;color:blue; border: 2px solid white"
+                                                placeholder="Search...">
+                                            <button type="submit"><i class="ri-search-line"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="responsive-burger-menu d-lg-none d-block">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="/accounts/register/" class="nav-link">
+                            <span class="icon"><i class="flaticon-information"></i></span>
+                            <span class="menu-title">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/accounts/login/" class="nav-link">
+                            <span class="icon"><i class="flaticon-user"></i></span>
+                            <span class="menu-title">Login</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title"> Blog Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/" class="nav-link">
+                            <span class="icon"><i class="flaticon-friends"></i></span>
+                            <span class="menu-title">Forum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/events/" class="nav-link">
+                            <span class="icon"><i class="flaticon-calendar"></i></span>
+                            <span class="menu-title">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/careers/gis/data-science/learning/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title">Learning</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/business/product/marketplace/" class="nav-link">
+                            <span class="icon"><i class="flaticon-online-shopping"></i></span>
+                            <span class="menu-title">Marketplace</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+
+        <!-- ZUst End -->
+
+
+        <!-- ======= Header ======= -->
+
+
+
+
+        <p id="blue-nav"></p>
+
+
+
+
+
+        <div id="map">
+            <!-- In the message partials we configure what gets displayed in our messages -->
+            <!-- We check if there is  a msessge -->
+
+
+
+            <!-- loader -->
+            <h1 id="load">Map Data Loading... <br> Please wait...</h1>
+            <div id="ring" class="ring"> </div>
+
+            <!-- controls -->
+
+            <!-- leaflet  fullscreen -->
+            <div class="leaflet-control switch-full-screen tip-left" style="top: 215;" onclick=fullScreenView()
+                data-toggle="tooltip" data-placement="left" title="View fullscreen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to coordinate -->
+            <div class="leaflet-control zoom-to-coordinate" id="zoom">
+                Latitude: <input type="text" name="lat" id="lat" />
+                Longitude: <input type="text" name="lng" id="lng" />
+                <input type="button" onclick="zoomTo()" value="ZoomToCoordinate"
+                    style="background-color:#4169e1; color : white;" />
+            </div>
+
+            <!-- Zoom to  cordinate Icon -->
+            <div class="leaflet-control zoom-to-coord-icon tip-left" onclick="showZoomTo()" data-toggle="tooltip"
+                data-placement="left" title="Zoom to coordinate">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-globe2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                </svg>
+            </div>
+
+
+            <!-- Zoom to Map center point -->
+            <div class="leaflet-control zoom-to-center-point tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to map center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                </svg>
+            </div>
+
+            <!-- Zoom to my current position -->
+            <div class="leaflet-control zoom-to-location tip-left" data-toggle="tooltip" data-placement="left"
+                title="Zoom to my location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="18px" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                </svg>
+            </div>
+
+            <!-- open side bar -->
+            <div class="leaflet-control open-side-bar tip-left" data-toggle="tooltip" data-placement="left"
+                title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z" />
+                </svg>
+            </div>
+
+            <!-- open bottom panel -->
+            <div class="leaflet-control open-bottom-panel tip-left" onclick="showBottomPanel()" data-toggle="tooltip"
+                data-placement="left" title="Open Sidebar to Filter by Attributes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
+                    class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+                </svg>
+            </div>
+            <!-- Auto width -->
+            <button class="leaflet-control" id="download-data" onclick="exportTableToCSV('disease_data.csv')"><i
+                    class="fa fa-download"></i> Download <span id="count"></span> Records</button>
+            <!-- <button class="leaflet-control" id="download-data2" ><span id = "count"></span> Towers</button> -->
+
+            <!-- Add new data -->
+            <div class=" leaflet-control add-data tip-left" id="add-data"><a href="/geoportal/add_disease"><button
+                        class="btn btn-info"> Add data </button></a></div>
+
+            <!-- Map coordinates display -->
+            <div class="leaflet-control fixed-bottom" id="fixed-bottom"> </div>
+            <div class="leaflet-control map-coordinate">
+                <div class="coordinate"></div>
+            </div>
+
+
+            <!-- controls end -->
+
+            <!-- ############################################ -->
+
+            <!-- Sidebar -->
+            <div id="div1" style="display:none">
+                <div id="sidebar">
+                    <div id="filter" class="col-xs-12">
+                        <div id="filterLabel" class=" text-center col-xs-12">
+                            <h4>FILTER BY ATTRIBUTES</h4>
+                        </div>
+
+                        <!-- Vantage -->
+
+
+                        <!-- Disease -->
+
+
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Disease</summary>
+                            <div class="inputs" id="Diseases">
+                                <input type="checkbox" id="checkAll_diseases" name="checkAll_diseases" value="Check All"
+                                    onclick="toggleDiseaseCheckboxes()" checked="true">
+                                <label for="checkAll_diseases">Check All</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Malaria" checked="true">
+                                <label for="Malaria">Malaria</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Yellow fever" checked="true">
+                                <label for="Yellow fever">Yellow fever</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Cholera" checked="true">
+                                <label for="Cholera">Cholera</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Typhoid fever" checked="true">
+                                <label for="Typhoid fever">Typhoid fever</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Hepatitis A" checked="true">
+                                <label for="Hepatitis A">Hepatitis A</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Diarrheal diseases"
+                                    checked="true">
+                                <label for="Diarrheal diseases">Diarrheal diseases</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Buruli ulcer" checked="true">
+                                <label for="Buruli ulcer">Buruli ulcer</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel"
+                                    value="Guinea worm disease (Dracunculiasis)" checked="true">
+                                <label for="Guinea worm disease (Dracunculiasis)">Guinea worm disease
+                                    (Dracunculiasis)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel"
+                                    value="Sleeping sickness (Human African trypanosomiasis)" checked="true">
+                                <label for="Sleeping sickness (Human African trypanosomiasis)">Sleeping sickness (Human
+                                    African trypanosomiasis)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Leprosy" checked="true">
+                                <label for="Leprosy">Leprosy</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel"
+                                    value="Elephantiasis (Lymphatic filariasis)" checked="true">
+                                <label for="Elephantiasis (Lymphatic filariasis)">Elephantiasis (Lymphatic
+                                    filariasis)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel"
+                                    value="River blindness (Onchocerciasis)" checked="true">
+                                <label for="River blindness (Onchocerciasis)">River blindness (Onchocerciasis)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Schistosomiasis (bilharzia)"
+                                    checked="true">
+                                <label for="Schistosomiasis (bilharzia)">Schistosomiasis (bilharzia)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Hookworm" checked="true">
+                                <label for="Hookworm">Hookworm</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Intestinal worms"
+                                    checked="true">
+                                <label for="Intestinal worms">Intestinal worms</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Dengue fever" checked="true">
+                                <label for="Dengue fever">Dengue fever</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Tuberculosis (TB)"
+                                    checked="true">
+                                <label for="Tuberculosis (TB)">Tuberculosis (TB)</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Pneumonia" checked="true">
+                                <label for="Pneumonia">Pneumonia</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Meningitis" checked="true">
+                                <label for="Meningitis">Meningitis</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Whooping cough" checked="true">
+                                <label for="Whooping cough">Whooping cough</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Lassa fever" checked="true">
+                                <label for="Lassa fever">Lassa fever</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Polio" checked="true">
+                                <label for="Polio">Polio</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Measles" checked="true">
+                                <label for="Measles">Measles</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="HIV/AIDS" checked="true">
+                                <label for="HIV/AIDS">HIV/AIDS</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Hepatitis B and C"
+                                    checked="true">
+                                <label for="Hepatitis B and C">Hepatitis B and C</label>
+                                <br>
+
+                                <input type="checkbox" class="disease" name="Sel" value="Unknown sickness"
+                                    checked="true">
+                                <label for="Unknown sickness">Unknown sickness</label>
+                                <br>
+
+                            </div>
+                        </details>
+
+
+                        <!-- Disease Category -->
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Disease Category</summary>
+                            <div class="inputs" id="DiseaseCats">
+                                <input type="checkbox" id="checkAll_diseasecats" name="checkAll_diseasecats"
+                                    value="Check All" onclick="toggleDiseaseCategoryCheckboxes()" checked="true">
+                                <label for="checkAll_diseasecats">Check All</label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel" value="Vector-borne diseases"
+                                    checked="true">
+                                <label for="Vector-borne diseases">Vector-borne diseases <i class="fa-solid fa-mosquito"
+                                        style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel"
+                                    value="Waterborne and foodborne diseases" checked="true">
+                                <label for="Waterborne and foodborne diseases">Waterborne and foodborne diseases <i
+                                        class="fa-solid fa-glass-water-droplet" style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel"
+                                    value="Neglected tropical diseases (NTDs)" checked="true">
+                                <label for="Neglected tropical diseases (NTDs)">Neglected tropical diseases (NTDs) <i
+                                        class="fa-solid fa-square-person-confined" style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel" value="Respiratory infections"
+                                    checked="true">
+                                <label for="Respiratory infections">Respiratory infections <i class="fa-solid fa-lungs"
+                                        style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel" value="Viral infections"
+                                    checked="true">
+                                <label for="Viral infections">Viral infections <i class="fa-solid fa-virus-covid"
+                                        style="color: white;"></i></label>
+                                <br>
+                                <input type="checkbox" class="category" name="Sel" value="Unknown sicknesses"
+                                    checked="true">
+                                <label for="Unknown sicknesses">Unknown sicknesses <i
+                                        class="fa-solid fa-head-side-cough" style="color: white;"></i></label>
+                                <br>
+                            </div>
+                        </details>
+
+
+                        <!-- Age -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Age</summary>
+                            <div class="inputs" id="Ages">
+                                <input type="checkbox" id="checkAll_ages" name="checkAll_ages" value="Check All"
+                                    onclick="toggleAgeCheckboxes()" checked="true">
+                                <label for="checkAll_ages">Check All</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Newborns (0-1 month old)"
+                                    checked="true">
+                                <label for="Newborns (0-1 month old)">Newborns (0-1 month old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Infants (1-12 months old)"
+                                    checked="true">
+                                <label for="Infants (1-12 months old)">Infants (1-12 months old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Toddlers (1-3 years old)"
+                                    checked="true">
+                                <label for="Toddlers (1-3 years old)">Toddlers (1-3 years old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Children (4-12 years old)"
+                                    checked="true">
+                                <label for="Children (4-12 years old)">Children (4-12 years old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Adolescents (13-18 years old)"
+                                    checked="true">
+                                <label for="Adolescents (13-18 years old)">Adolescents (13-18 years old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Young Adults (19-29 years old)"
+                                    checked="true">
+                                <label for="Young Adults (19-29 years old)">Young Adults (19-29 years old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Adults (30-49 years old)"
+                                    checked="true">
+                                <label for="Adults (30-49 years old)">Adults (30-49 years old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel"
+                                    value="Middle-aged adults (50-64 years old)" checked="true">
+                                <label for="Middle-aged adults (50-64 years old)">Middle-aged adults (50-64 years
+                                    old)</label>
+                                <br>
+
+                                <input type="checkbox" class="age" name="Sel" value="Elderly (65 years old and above)"
+                                    checked="true">
+                                <label for="Elderly (65 years old and above)">Elderly (65 years old and above)</label>
+                                <br>
+
+                            </div>
+                        </details>
+                        <!-- Genotype -->
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Genotype</summary>
+                            <div class="inputs" id="Genotypes">
+                                <input type="checkbox" id="checkAll_genotypes" name="checkAll_genotypes"
+                                    value="Check All" onclick="toggleGenotypeCheckboxes()" checked="true">
+                                <label for="checkAll_genotypes">Check All</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="AA - normal hemoglobin"
+                                    checked="true">
+                                <label for="AA - normal hemoglobin">AA - normal hemoglobin</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="AS - sickle cell trait"
+                                    checked="true">
+                                <label for="AS - sickle cell trait">AS - sickle cell trait</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="AC - hemoglobin C trait"
+                                    checked="true">
+                                <label for="AC - hemoglobin C trait">AC - hemoglobin C trait</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="SS - sickle cell anemia"
+                                    checked="true">
+                                <label for="SS - sickle cell anemia">SS - sickle cell anemia</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel"
+                                    value="SC - sickle-hemoglobin C disease" checked="true">
+                                <label for="SC - sickle-hemoglobin C disease">SC - sickle-hemoglobin C disease</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="BT - Beta thalassemia trait"
+                                    checked="true">
+                                <label for="BT - Beta thalassemia trait">BT - Beta thalassemia trait</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="BO - Beta thalassemia major"
+                                    checked="true">
+                                <label for="BO - Beta thalassemia major">BO - Beta thalassemia major</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel"
+                                    value="B+ - Beta thalassemia intermedia" checked="true">
+                                <label for="B+ - Beta thalassemia intermedia">B+ - Beta thalassemia intermedia</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="AT - Alpha thalassemia trait"
+                                    checked="true">
+                                <label for="AT - Alpha thalassemia trait">AT - Alpha thalassemia trait</label>
+                                <br>
+
+                                <input type="checkbox" class="genotype" name="Sel" value="HbET- Hemoglobin E trait"
+                                    checked="true">
+                                <label for="HbET- Hemoglobin E trait">HbET- Hemoglobin E trait</label>
+                                <br>
+
+                            </div>
+                        </details>
+
+                        <!-- Blood group -->
+                        <details class="col-xs-12" id="vantageDiv">
+                            <summary id="secTitle" class="text-center col-xs-12">Blood Group</summary>
+                            <div class="inputs" id="BloodGroups">
+                                <input type="checkbox" id="checkAll_bloodgroups" name="checkAll_bloodgroups"
+                                    value="Check All" onclick="toggleBloodGroupCheckboxes()" checked="true">
+                                <label for="checkAll_bloodgroups">Check All</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="O+ (O positive)"
+                                    checked="true">
+                                <label for="O+ (O positive)">O+ (O positive)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="O- (O negative)"
+                                    checked="true">
+                                <label for="O- (O negative)">O- (O negative)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="A+ (A positive)"
+                                    checked="true">
+                                <label for="A+ (A positive)">A+ (A positive)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="A- (A negative)"
+                                    checked="true">
+                                <label for="A- (A negative)">A- (A negative)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="B+ (B positive)"
+                                    checked="true">
+                                <label for="B+ (B positive)">B+ (B positive)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="B- (B negative)"
+                                    checked="true">
+                                <label for="B- (B negative)">B- (B negative)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="AB+ (AB positive)"
+                                    checked="true">
+                                <label for="AB+ (AB positive)">AB+ (AB positive)</label>
+                                <br>
+
+                                <input type="checkbox" class="blood_group" name="Sel" value="AB- (AB negative)"
+                                    checked="true">
+                                <label for="AB- (AB negative)">AB- (AB negative)</label>
+                                <br>
+
+                            </div>
+                        </details>
+
+
+
+                        <!-- Record Time Class -->
+
+                        <details class="col-xs-12" id="vantageDiv">
+
+                            <summary id="secTitle" class=" text-center col-xs-12">Record Class</summary>
+
+                            <div class="inputs" id="Time Class">
+                                <input type="checkbox" class="time_class" name="Sel" value="Current" checked="true">
+                                <label for="Current">Current (Less than 1 month) <i class="fa-solid fa-location-dot"
+                                        style="color: red;"></i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Recent" checked="true">
+                                <label for="Recent">Recent (Less than 6 months) <i class="fa-solid fa-location-dot"
+                                        style="color: rgb(119, 214, 119);"></i></label>
+                                <br>
+                                <input type="checkbox" class="time_class" name="Sel" value="Sometime ago"
+                                    checked="true">
+                                <label for="Sometime ago">Old (6 months or more) <i class="fa-solid fa-location-dot"
+                                        style="color: white;"></i></label>
+                            </div>
+                        </details>
+
+
+
+
+
+
+                        <button type="button" class="btn btn-success col-xs-12" id="filter-button">Update
+                            Selection</button>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ############################################ -->
+
+    </div>
+
+
+    <meta property="og:title" content=" Disease Tracker | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/disease_map.PNG" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Realtime Disease Tracker" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+
+
+
+
+
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/static/vendor/swiper/swiper-bundle.min.js.map"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/static/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/dist/main.js"></script>
+
+    <!-- Links of JS files -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/assets/js/jquery-ui.min.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/wow.min.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Mapscripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"
+        integrity="sha512-Oj9plGLST4IMXFXDfqMdTP+gSInbodkyno117PSjo5R08eu6TdzY9WPnnwQZGx2O2lG/kN0MzQk95ulWsRFuLA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- begin libraries -->
+
+
+    <!--    *****  Begin Leaflet.Draw-->
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="/static/lib/leaflet.geometryutil.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.draw.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.Draw.Event.js"></script>
+    <link rel="stylesheet" href="/static/lib/leaflet-draw/leaflet.draw.css" />
+
+    <script src="/static/lib/leaflet-draw/Toolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/Tooltip.js"></script>
+
+    <script src="/static/lib/leaflet-draw/ext/GeometryUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LatLngUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LineUtil.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polygon.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polyline.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/TouchEvents.js"></script>
+
+    <script src="/static/lib/leaflet-draw/draw/DrawToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Feature.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Marker.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+    <script src="/static/lib/leaflet-draw/edit/EditToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="/static/lib/leaflet-draw/Control.Draw.js"></script>
+
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Poly.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Marker.js"></script>
+
+    <!--    ******  End of Lealet Draw-->
+    <script type="text/javascript" src="/static/lib/leaflet.browser.print.min.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet-measure.js"></script>
+
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet.markercluster.js"></script>
+    <script type="text/javascript"
+        src="/static/lib/Leaflet.StyledLayerControl-master/src/styledLayerControl.js"></script>
+    <script src="/static/lib/Control-Sidebar.js"></script>
+    <script src="/static/dist/supply_chain_examples.js"></script>
+
+    <script src="/static/lib/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrSb7Uq81AMmOIJMozrW6j8wYirtQhyiY&libraries=geometry,places"></script> -->
+
+
+
+    <!-- end libraries -->
+
+
+    <script>
+
+        var customOptions =
+        {
+            'maxWidth': '200',
+            'className': 'lf-custom'
+        }
+
+        // Convert the queryset to GeoJSON format
+
+        var diseaseGeojson = {
+            "type": "FeatureCollection",
+            "features": [
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1162541, 6.2487381]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "None",
+                        "symptoms": "Cough, Sneezing, Fever",
+                        "time_class": "Old",
+                        "latitude": "6.2487381",
+                        "longitude": "7.1162541",
+                        "time_created": "July 12, 2023, 9:33 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1114019, 6.2462141]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik Medical centre",
+                        "symptoms": "Headache, loss of appetite",
+                        "time_class": "Old",
+                        "latitude": "6.2462141",
+                        "longitude": "7.1114019",
+                        "time_created": "July 12, 2023, 10:19 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1181073, 6.2451172]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Life hospital, Awka",
+                        "symptoms": "Cold Severe headache Feverish Catarrh Lack of appetite  Vomiting",
+                        "time_class": "Old",
+                        "latitude": "6.2451172",
+                        "longitude": "7.1181073",
+                        "time_created": "July 12, 2023, 12:29 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1186567, 6.2476017]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical center",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "6.2476017",
+                        "longitude": "7.1186567",
+                        "time_created": "July 12, 2023, 3:04 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1189455, 6.2487018]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "None",
+                        "symptoms": "Headache, Fever",
+                        "time_class": "Old",
+                        "latitude": "6.2487018",
+                        "longitude": "7.1189455",
+                        "time_created": "July 12, 2023, 9:42 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1189455, 6.2487018]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "None",
+                        "symptoms": "Fever",
+                        "time_class": "Old",
+                        "latitude": "6.2487018",
+                        "longitude": "7.1189455",
+                        "time_created": "July 12, 2023, 9:42 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1149131, 6.2503262]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Coou teaching hospital",
+                        "symptoms": "Headache and fever with body weakness",
+                        "time_class": "Old",
+                        "latitude": "6.2503262",
+                        "longitude": "7.1149131",
+                        "time_created": "July 12, 2023, 10:53 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.13725725739513, 6.277989034598706]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "St. Charles Laboratory, Awka",
+                        "symptoms": "Cold, catarrh, cough, fever",
+                        "time_class": "Old",
+                        "latitude": "6.277989034598706",
+                        "longitude": "7.13725725739513",
+                        "time_created": "July 12, 2023, 12:07 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [13.3459278, 52.5672362]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Bluegrass lab",
+                        "symptoms": "Stomach ache and fever",
+                        "time_class": "Recent",
+                        "latitude": "52.5672362",
+                        "longitude": "13.3459278",
+                        "time_created": "Feb. 29, 2024, 10:05 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3009289, 6.5502693]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "West care hospital",
+                        "symptoms": "High temperature and body weakness.",
+                        "time_class": "Old",
+                        "latitude": "6.5502693",
+                        "longitude": "3.3009289",
+                        "time_created": "Nov. 28, 2023, 5:14 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.505444, 9.0434905]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "AMAC",
+                        "symptoms": "Headache, Fever,",
+                        "time_class": "Old",
+                        "latitude": "9.0434905",
+                        "longitude": "7.505444",
+                        "time_created": "July 13, 2023, 9:08 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.075760359999998, 6.219018929999997]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "6.219018929999997",
+                        "longitude": "7.075760359999998",
+                        "time_created": "July 10, 2023, 10:57 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3517468351158244, 6.4686526847358845]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Hero Clinic",
+                        "symptoms": "Catarrh  Dizziness  Headache  High temperature",
+                        "time_class": "Old",
+                        "latitude": "6.4686526847358845",
+                        "longitude": "3.3517468351158244",
+                        "time_created": "July 17, 2023, 10:46 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3686831, 8.9840414]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Yabisam hospital abuja",
+                        "symptoms": "Vommiting",
+                        "time_class": "Old",
+                        "latitude": "8.9840414",
+                        "longitude": "7.3686831",
+                        "time_created": "July 12, 2023, 12:10 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.33691422805806, 6.5225225225225225]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Holy family hospital satellite Town Lagos",
+                        "symptoms": "Fever,headache &amp; nousea",
+                        "time_class": "Old",
+                        "latitude": "6.5225225225225225",
+                        "longitude": "3.33691422805806",
+                        "time_created": "Nov. 28, 2023, 12:04 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1114019, 6.2462141]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik Medical centre",
+                        "symptoms": "Headache, loss of appetite",
+                        "time_class": "Old",
+                        "latitude": "6.2462141",
+                        "longitude": "7.1114019",
+                        "time_created": "July 12, 2023, 10:19 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1172572573951305, 6.247989034598706]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Regina Caeli",
+                        "symptoms": "Tiredness  Weakness  Bitter tongue",
+                        "time_class": "Old",
+                        "latitude": "6.247989034598706",
+                        "longitude": "7.1172572573951305",
+                        "time_created": "July 12, 2023, 12:04 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.117141858788433, 6.247996531053342]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical centre",
+                        "symptoms": "Fever",
+                        "time_class": "Old",
+                        "latitude": "6.247996531053342",
+                        "longitude": "7.117141858788433",
+                        "time_created": "July 12, 2023, 11:29 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3727589, 8.9808823]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "AMC hospital Abuja",
+                        "symptoms": "Headache Cold",
+                        "time_class": "Old",
+                        "latitude": "8.9808823",
+                        "longitude": "7.3727589",
+                        "time_created": "July 12, 2023, 1:37 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1181026, 6.2451109]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "El Dorado Multi soecialist Hospital, Awka",
+                        "symptoms": "Catarrh Cough Headache  Fever Fatigue",
+                        "time_class": "Old",
+                        "latitude": "6.2451109",
+                        "longitude": "7.1181026",
+                        "time_created": "July 12, 2023, 12:01 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1101988, 6.2590407]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "general hospital Enugu-ukwu",
+                        "symptoms": "headache  dizziness",
+                        "time_class": "Old",
+                        "latitude": "6.2590407",
+                        "longitude": "7.1101988",
+                        "time_created": "July 12, 2023, 3:49 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0953993, 6.2480304]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "6.2480304",
+                        "longitude": "7.0953993",
+                        "time_created": "July 24, 2023, 8:43 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.117638064063078, 6.248046495430133]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Odumegwu Ojukwu Teaching Hospital, Awka, Anambra State",
+                        "symptoms": "Headache, fever, body pain, catarrh, cough, loss of appetite, runny stomach",
+                        "time_class": "Old",
+                        "latitude": "6.248046495430133",
+                        "longitude": "7.117638064063078",
+                        "time_created": "July 12, 2023, 12:12 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.8195247, 6.138967]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Boromi hospital",
+                        "symptoms": "General body pains Fever and headache Fatigue Loss of appetite",
+                        "time_class": "Old",
+                        "latitude": "6.138967",
+                        "longitude": "6.8195247",
+                        "time_created": "July 8, 2023, 8:54 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9879056, 7.2499115]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "CRC-N CHC TAKUM",
+                        "symptoms": "Weakness of the body",
+                        "time_class": "Old",
+                        "latitude": "7.2499115",
+                        "longitude": "9.9879056",
+                        "time_created": "Nov. 29, 2023, 6:16 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5046199, 9.0433546]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Federal medical centre",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "9.0433546",
+                        "longitude": "7.5046199",
+                        "time_created": "July 13, 2023, 12:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1105769, 6.2589791]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Colliery hospital, Enugu",
+                        "symptoms": "Headache Chills High temperature Loss of appetite",
+                        "time_class": "Old",
+                        "latitude": "6.2589791",
+                        "longitude": "7.1105769",
+                        "time_created": "July 12, 2023, 3:59 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.7962271, 51.2679704]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "51.2679704",
+                        "longitude": "6.7962271",
+                        "time_created": "Nov. 27, 2023, 8:56 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3964021, 6.8440842]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Amaku General hospital Awka",
+                        "symptoms": "Headache, nausea, high temperature, weakness",
+                        "time_class": "Old",
+                        "latitude": "6.8440842",
+                        "longitude": "7.3964021",
+                        "time_created": "July 10, 2023, 7:02 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.49865075985631, 9.045045045045045]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Vinyl laboratory Abuja",
+                        "symptoms": "Vomiting and dizziness",
+                        "time_class": "Old",
+                        "latitude": "9.045045045045045",
+                        "longitude": "7.49865075985631",
+                        "time_created": "July 13, 2023, 9:02 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0756429, 6.1992015]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Rock Foundation Hospital",
+                        "symptoms": "Cold, Catarrh and Fever.",
+                        "time_class": "Old",
+                        "latitude": "6.1992015",
+                        "longitude": "7.0756429",
+                        "time_created": "July 12, 2023, 5:02 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1076069, 6.2588332]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "Life specialist hospital nnewi",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "6.2588332",
+                        "longitude": "7.1076069",
+                        "time_created": "July 14, 2023, 2:06 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.476512, 9.0785959]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "University of Abuja Teaching Hospital",
+                        "symptoms": "Cough, Cold, joint pain",
+                        "time_class": "Old",
+                        "latitude": "9.0785959",
+                        "longitude": "7.476512",
+                        "time_created": "July 12, 2023, 10 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5045476, 9.0432625]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "None",
+                        "symptoms": "Unstable temperature, headaches, weakness",
+                        "time_class": "Old",
+                        "latitude": "9.0432625",
+                        "longitude": "7.5045476",
+                        "time_created": "July 13, 2023, 12:09 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.332732, 6.5251668]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Living spring hospital",
+                        "symptoms": "Headache,Body pain",
+                        "time_class": "Old",
+                        "latitude": "6.5251668",
+                        "longitude": "3.332732",
+                        "time_created": "Nov. 28, 2023, 1:33 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.987755, 7.2531733]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "PHCC",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "7.2531733",
+                        "longitude": "9.987755",
+                        "time_created": "Dec. 14, 2023, 4:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1118925, 6.2610078]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Mount Zion medicals",
+                        "symptoms": "Bitters taste, headache, weakness",
+                        "time_class": "Old",
+                        "latitude": "6.2610078",
+                        "longitude": "7.1118925",
+                        "time_created": "July 12, 2023, 4:27 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1104922, 6.2598238]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical centre",
+                        "symptoms": "Fever",
+                        "time_class": "Old",
+                        "latitude": "6.2598238",
+                        "longitude": "7.1104922",
+                        "time_created": "July 12, 2023, 6:14 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1109667, 6.2596767]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical center",
+                        "symptoms": "Headache High body temperature",
+                        "time_class": "Old",
+                        "latitude": "6.2596767",
+                        "longitude": "7.1109667",
+                        "time_created": "July 12, 2023, 4:14 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2513253599999987, 6.6124029099999975]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Lagos state university teaching hospital",
+                        "symptoms": "Headache, fever, rise in body temperature",
+                        "time_class": "Old",
+                        "latitude": "6.6124029099999975",
+                        "longitude": "3.2513253599999987",
+                        "time_created": "Aug. 5, 2023, 8:53 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5055164, 9.0435137]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "AMAC Hospital",
+                        "symptoms": "Cold, headache",
+                        "time_class": "Old",
+                        "latitude": "9.0435137",
+                        "longitude": "7.5055164",
+                        "time_created": "July 13, 2023, 1:28 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5046907, 9.0429758]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Middle-aged adults (50-64 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Can&#x27;t remember",
+                        "symptoms": "Weakness of the body, High temperature Loss of appetite",
+                        "time_class": "Old",
+                        "latitude": "9.0429758",
+                        "longitude": "7.5046907",
+                        "time_created": "July 13, 2023, 12:55 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0943904, 6.2477143]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Amaaku coou",
+                        "symptoms": "Fever",
+                        "time_class": "Old",
+                        "latitude": "6.2477143",
+                        "longitude": "7.0943904",
+                        "time_created": "July 14, 2023, 2:22 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.988162, 7.2544758]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "PHCC TAKUM",
+                        "symptoms": "Head ache Weakness of body Internal body heat",
+                        "time_class": "Old",
+                        "latitude": "7.2544758",
+                        "longitude": "9.988162",
+                        "time_created": "Dec. 14, 2023, 3:15 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [11.3359721, 8.947983]
+                    },
+                    "properties": {
+                        "disease": "Cholera",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital jalingo",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "8.947983",
+                        "longitude": "11.3359721",
+                        "time_created": "Dec. 5, 2023, 9:51 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1129287, 6.260031]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "St.luke",
+                        "symptoms": "Cough and catarrh",
+                        "time_class": "Old",
+                        "latitude": "6.260031",
+                        "longitude": "7.1129287",
+                        "time_created": "July 13, 2023, 10:15 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1076003, 6.2588316]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "From my relative doctor",
+                        "symptoms": "Cold and weakness",
+                        "time_class": "Old",
+                        "latitude": "6.2588316",
+                        "longitude": "7.1076003",
+                        "time_created": "July 14, 2023, 2:03 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1152449, 6.2504002]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical center",
+                        "symptoms": "High temperature",
+                        "time_class": "Old",
+                        "latitude": "6.2504002",
+                        "longitude": "7.1152449",
+                        "time_created": "July 13, 2023, 9:34 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.068710319999998, 6.199302669999998]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Divine hospital Anambra, Awka",
+                        "symptoms": "Weakness  Headaches  Body temperature  Sour tongue",
+                        "time_class": "Old",
+                        "latitude": "6.199302669999998",
+                        "longitude": "7.068710319999998",
+                        "time_created": "July 10, 2023, 9:02 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.881436640403122, 6.01295513101481]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "6.01295513101481",
+                        "longitude": "6.881436640403122",
+                        "time_created": "Aug. 4, 2023, 6:55 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1180945, 6.2450967]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Unizik medical center",
+                        "symptoms": "Cold Fever Headache",
+                        "time_class": "Old",
+                        "latitude": "6.2450967",
+                        "longitude": "7.1180945",
+                        "time_created": "July 12, 2023, 2:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.118913, 6.2474396]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Pharmacy",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "6.2474396",
+                        "longitude": "7.118913",
+                        "time_created": "July 12, 2023, 4:20 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2513253599999987, 6.6124029099999975]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Ikeja medical center",
+                        "symptoms": "Headache, sore throat,fever",
+                        "time_class": "Old",
+                        "latitude": "6.6124029099999975",
+                        "longitude": "3.2513253599999987",
+                        "time_created": "Aug. 5, 2023, 9 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.100111975036486, 5.926705505884844]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Lumen Christ Hospital",
+                        "symptoms": "Weakness of the body,headache,fever",
+                        "time_class": "Old",
+                        "latitude": "5.926705505884844",
+                        "longitude": "7.100111975036486",
+                        "time_created": "July 16, 2023, 5:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.013389, 5.7646998]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "St Mary&#x27;s Hospital, Orlu",
+                        "symptoms": "Lower pelvic pain Dizziness Fatigue",
+                        "time_class": "Old",
+                        "latitude": "5.7646998",
+                        "longitude": "7.013389",
+                        "time_created": "July 16, 2023, 2:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0777905, 6.2232059]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Nnamdi Azikiwe University Medical centre",
+                        "symptoms": "Intermittent severe headache",
+                        "time_class": "Old",
+                        "latitude": "6.2232059",
+                        "longitude": "7.0777905",
+                        "time_created": "July 12, 2023, 7:08 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2513253599999987, 6.6124029099999975]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Lagos state university teaching hospital",
+                        "symptoms": "Sore throat, fever, headache",
+                        "time_class": "Old",
+                        "latitude": "6.6124029099999975",
+                        "longitude": "3.2513253599999987",
+                        "time_created": "Aug. 5, 2023, 8:58 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.113594529999998, 6.262739179999997]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "Nuth nnewi",
+                        "symptoms": "None",
+                        "time_class": "Old",
+                        "latitude": "6.262739179999997",
+                        "longitude": "7.113594529999998",
+                        "time_created": "Aug. 4, 2023, 8:46 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3331995, 6.5252415]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Subol Hospital",
+                        "symptoms": "Malaria Fever Typhoid",
+                        "time_class": "Old",
+                        "latitude": "6.5252415",
+                        "longitude": "3.3331995",
+                        "time_created": "Nov. 28, 2023, 11:29 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.5060526, 6.417213]
+                    },
+                    "properties": {
+                        "disease": "Unknown sickness",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Unknown sicknesses",
+                        "diagnosis_hospital_or_lab_name": "None",
+                        "symptoms": "Fever and cold",
+                        "time_class": "Old",
+                        "latitude": "6.417213",
+                        "longitude": "7.5060526",
+                        "time_created": "July 10, 2023, 10:02 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.581384650000775, 9.000797270005895]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Teaching hospital NNEWI",
+                        "symptoms": "Headache  Fever",
+                        "time_class": "Old",
+                        "latitude": "9.000797270005895",
+                        "longitude": "7.581384650000775",
+                        "time_created": "Aug. 4, 2023, 6:58 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.10532512492047, 6.252252252252252]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "NAU LAB",
+                        "symptoms": "Cough",
+                        "time_class": "Old",
+                        "latitude": "6.252252252252252",
+                        "longitude": "7.10532512492047",
+                        "time_created": "July 12, 2023, 10:15 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1159518, 6.2528079]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "NAU LAB",
+                        "symptoms": "Headache,dizzyness",
+                        "time_class": "Old",
+                        "latitude": "6.2528079",
+                        "longitude": "7.1159518",
+                        "time_created": "July 12, 2023, 9:48 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [8.0777226, 6.3277126]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "AB+ (AB positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Federal medical centre Abakaliki",
+                        "symptoms": "Cold  Catarrh",
+                        "time_class": "Old",
+                        "latitude": "6.3277126",
+                        "longitude": "8.0777226",
+                        "time_created": "July 15, 2023, 12:43 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9861585, 7.2509481]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital Takum",
+                        "symptoms": "Weakness of body Head aches Internal body heat",
+                        "time_class": "Old",
+                        "latitude": "7.2509481",
+                        "longitude": "9.9861585",
+                        "time_created": "Dec. 1, 2023, 3:55 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1804499, 8.9799936]
+                    },
+                    "properties": {
+                        "disease": "Buruli ulcer",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Neglected tropical diseases (NTDs)",
+                        "diagnosis_hospital_or_lab_name": "KUBWA GENERAL HOSPITAL ABUJA",
+                        "symptoms": "Chest pain  Abdomen pain",
+                        "time_class": "Old",
+                        "latitude": "8.9799936",
+                        "longitude": "7.1804499",
+                        "time_created": "July 14, 2023, 5:35 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9868574, 7.2452772]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital Takum",
+                        "symptoms": "Running temperature Feverish Head ache",
+                        "time_class": "Old",
+                        "latitude": "7.2452772",
+                        "longitude": "9.9868574",
+                        "time_created": "Dec. 1, 2023, 6:25 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.98819, 7.2544317]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "B+ (B positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Crcn compressive clinic",
+                        "symptoms": "Internal body heat Weakness of the body",
+                        "time_class": "Old",
+                        "latitude": "7.2544317",
+                        "longitude": "9.98819",
+                        "time_created": "Nov. 29, 2023, 9:05 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital Takum",
+                        "symptoms": "Headeche, Internal body heat Soar throat Weakness of body",
+                        "time_class": "Old",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517",
+                        "time_created": "Nov. 29, 2023, 2:47 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9880836, 7.2538064]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital Takum",
+                        "symptoms": "Head aches Internal body heat Weakness of body",
+                        "time_class": "Old",
+                        "latitude": "7.2538064",
+                        "longitude": "9.9880836",
+                        "time_created": "Nov. 29, 2023, 4:13 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2513253599999987, 6.6124029099999975]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Lagos state university teaching hospital",
+                        "symptoms": "Headache, fever, rise in body temperature",
+                        "time_class": "Old",
+                        "latitude": "6.6124029099999975",
+                        "longitude": "3.2513253599999987",
+                        "time_created": "Aug. 5, 2023, 8:53 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.613223630145372, 6.472616958748195]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Annunciation hospital emene,Enugu state",
+                        "symptoms": "Headache and lost of appetite",
+                        "time_class": "Old",
+                        "latitude": "6.472616958748195",
+                        "longitude": "7.613223630145372",
+                        "time_created": "July 8, 2023, 11:31 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1073327, 6.2588322]
+                    },
+                    "properties": {
+                        "disease": "Pneumonia",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Respiratory infections",
+                        "diagnosis_hospital_or_lab_name": "Medical Laboratory Nnamdi Azikiwe Uni",
+                        "symptoms": "Severe cold",
+                        "time_class": "Old",
+                        "latitude": "6.2588322",
+                        "longitude": "7.1073327",
+                        "time_created": "July 14, 2023, 3:48 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3327327, 6.5251611]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Rolayo Hospital",
+                        "symptoms": "Slight headache",
+                        "time_class": "Old",
+                        "latitude": "6.5251611",
+                        "longitude": "3.3327327",
+                        "time_created": "Nov. 28, 2023, 2:01 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.9213169, 6.0239114]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Teaching hospital nnewi",
+                        "symptoms": "Malaria",
+                        "time_class": "Old",
+                        "latitude": "6.0239114",
+                        "longitude": "6.9213169",
+                        "time_created": "Aug. 5, 2023, 2:39 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1109133, 6.2596733]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "B+ (B positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Our lady of Fatima clinic",
+                        "symptoms": "Fever, headache",
+                        "time_class": "Old",
+                        "latitude": "6.2596733",
+                        "longitude": "7.1109133",
+                        "time_created": "July 12, 2023, 4:14 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9903517, 7.2545154]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "PHCC",
+                        "symptoms": "Dizines Headache Weakness of body",
+                        "time_class": "Old",
+                        "latitude": "7.2545154",
+                        "longitude": "9.9903517",
+                        "time_created": "Dec. 14, 2023, 4:23 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.3916733, 6.5385502]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "6.5385502",
+                        "longitude": "3.3916733",
+                        "time_created": "Nov. 25, 2023, 8:56 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9847608, 7.2556368]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O- (O negative)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Rufkatu maternity",
+                        "symptoms": "Stomach eche Weakness of body",
+                        "time_class": "Old",
+                        "latitude": "7.2556368",
+                        "longitude": "9.9847608",
+                        "time_created": "Dec. 14, 2023, 1:54 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9863443, 7.2534526]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General Hospital, Takum Taraba State",
+                        "symptoms": "Dizziness, headache",
+                        "time_class": "Old",
+                        "latitude": "7.2534526",
+                        "longitude": "9.9863443",
+                        "time_created": "Dec. 14, 2023, 3:12 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.2411210289232693, 6.515356812726246]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Peaceful health",
+                        "symptoms": "Better mouth",
+                        "time_class": "Old",
+                        "latitude": "6.515356812726246",
+                        "longitude": "3.2411210289232693",
+                        "time_created": "Nov. 27, 2023, 9:39 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.2101813, 8.977575]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Specialist hospital Abuja",
+                        "symptoms": "Headache High temperature Weakness of the body",
+                        "time_class": "Old",
+                        "latitude": "8.977575",
+                        "longitude": "7.2101813",
+                        "time_created": "July 14, 2023, 8:02 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9851102, 7.2486424]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "General hospital Takum",
+                        "symptoms": "Head ache Weakness of body Internal body heat",
+                        "time_class": "Old",
+                        "latitude": "7.2486424",
+                        "longitude": "9.9851102",
+                        "time_created": "Dec. 13, 2023, 3:53 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-121.9552356, 37.354107899999995]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "National judicial institute clinic, Abuja",
+                        "symptoms": "Headache, cold, body pain",
+                        "time_class": "Old",
+                        "latitude": "37.354107899999995",
+                        "longitude": "-121.9552356",
+                        "time_created": "July 14, 2023, 8:13 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.380869076636204, 9.152119829357646]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Step one lab",
+                        "symptoms": "Dizziness, fever",
+                        "time_class": "Old",
+                        "latitude": "9.152119829357646",
+                        "longitude": "7.380869076636204",
+                        "time_created": "July 14, 2023, 12:31 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9882817, 7.2541167]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adults (30-49 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Crcn clinic",
+                        "symptoms": "Weakness of body Head aches Internal body heat",
+                        "time_class": "Old",
+                        "latitude": "7.2541167",
+                        "longitude": "9.9882817",
+                        "time_created": "Nov. 29, 2023, 4:37 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.1162541, 6.2543428]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "NAU Medical centre",
+                        "symptoms": "Severe headache",
+                        "time_class": "Old",
+                        "latitude": "6.2543428",
+                        "longitude": "7.1162541",
+                        "time_created": "July 17, 2023, 11:32 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.1195585081130766, 5.7877794598312144]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "B+ (B positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "DELSU Medical Center",
+                        "symptoms": "Sore Throat, Cold, Catarrh, Cough,Fever, Headache",
+                        "time_class": "Old",
+                        "latitude": "5.7877794598312144",
+                        "longitude": "6.1195585081130766",
+                        "time_created": "Aug. 5, 2023, 8:44 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3386595, 9.0426091]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "",
+                        "time_class": "Old",
+                        "latitude": "9.0426091",
+                        "longitude": "7.3386595",
+                        "time_created": "July 14, 2023, 8:10 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.3673558, 8.9844183]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Ultra care laboratory Abuja",
+                        "symptoms": "Dizziness and fever",
+                        "time_class": "Old",
+                        "latitude": "8.9844183",
+                        "longitude": "7.3673558",
+                        "time_created": "July 12, 2023, 8:29 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9927979, 7.2491383]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "B+ (B positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Rifkatu maternity clinic",
+                        "symptoms": "Head ache Weaknesses of body  Internal body heat",
+                        "time_class": "Old",
+                        "latitude": "7.2491383",
+                        "longitude": "9.9927979",
+                        "time_created": "Dec. 4, 2023, 3:31 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [6.795793310828141, 6.1441441441441444]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Gem diagnostic",
+                        "symptoms": "Fever, headache, tiredness",
+                        "time_class": "Old",
+                        "latitude": "6.1441441441441444",
+                        "longitude": "6.795793310828141",
+                        "time_created": "Aug. 4, 2023, 7:03 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [3.235831490087736, 6.451442239864264]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "A+ (A positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Holy Family Hospital Satellite Town Lagos State",
+                        "symptoms": "Feverish and headache.",
+                        "time_class": "Old",
+                        "latitude": "6.451442239864264",
+                        "longitude": "3.235831490087736",
+                        "time_created": "Nov. 27, 2023, 9:02 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9854481, 7.2562762]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O- (O negative)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Crcn clinic Takum",
+                        "symptoms": "Running temperature Weakness of body  Head ache",
+                        "time_class": "Old",
+                        "latitude": "7.2562762",
+                        "longitude": "9.9854481",
+                        "time_created": "Dec. 1, 2023, 5:06 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4979427, 9.046638]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Madaki hospital",
+                        "symptoms": "Cold",
+                        "time_class": "Old",
+                        "latitude": "9.046638",
+                        "longitude": "7.4979427",
+                        "time_created": "July 13, 2023, 1:18 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9721826, 7.2495925]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "General Hospital Takum, Taraba State",
+                        "symptoms": "Headache, Cold, Feverish, Lost of Test",
+                        "time_class": "Old",
+                        "latitude": "7.2495925",
+                        "longitude": "9.9721826",
+                        "time_created": "Dec. 15, 2023, 11:07 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.4575187, 8.9714262]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Adolescents (13-18 years old)",
+                        "genotype": "AS - sickle cell trait",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "",
+                        "symptoms": "Headache, Pain, Fever",
+                        "time_class": "Old",
+                        "latitude": "8.9714262",
+                        "longitude": "7.4575187",
+                        "time_created": "July 9, 2023, 11:04 a.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.077177310524849, 6.0311060124990075]
+                    },
+                    "properties": {
+                        "disease": "Cholera",
+                        "age": "Children (4-12 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "Victory hospital",
+                        "symptoms": "Watery stool,fever",
+                        "time_class": "Old",
+                        "latitude": "6.0311060124990075",
+                        "longitude": "7.077177310524849",
+                        "time_created": "July 16, 2023, 6:07 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [7.0016103037284365, 5.466609887243238]
+                    },
+                    "properties": {
+                        "disease": "Malaria",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Vector-borne diseases",
+                        "diagnosis_hospital_or_lab_name": "Living word",
+                        "symptoms": "Headache",
+                        "time_class": "Old",
+                        "latitude": "5.466609887243238",
+                        "longitude": "7.0016103037284365",
+                        "time_created": "Aug. 5, 2023, 2:34 p.m."
+                    }
+                }
+                ,
+
+                {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [9.9721826, 7.2495925]
+                    },
+                    "properties": {
+                        "disease": "Typhoid fever",
+                        "age": "Young Adults (19-29 years old)",
+                        "genotype": "AA - normal hemoglobin",
+                        "blood_group": "O+ (O positive)",
+                        "category": "Waterborne and foodborne diseases",
+                        "diagnosis_hospital_or_lab_name": "General Hospital Takum, Taraba State",
+                        "symptoms": "Headache, Cold, Feverish, Lost of Test",
+                        "time_class": "Old",
+                        "latitude": "7.2495925",
+                        "longitude": "9.9721826",
+                        "time_created": "Dec. 15, 2023, 11:07 a.m."
+                    }
+                }
+
+
+            ]
+        };
+
+
+
+        // ################### Map Icons #######################
+
+
+        //################# Download Map data ####################
+        function downloadCSV(csv, filename) {
+            var csvFile;
+            var downloadLink;
+
+            // CSV file
+            csvFile = new Blob([csv], { type: "text/csv" });
+
+            // Download link
+            downloadLink = document.createElement("a");
+
+            // File name
+            downloadLink.download = filename;
+
+            // Create a link to the file
+            downloadLink.href = window.URL.createObjectURL(csvFile);
+
+            // Hide download link
+            downloadLink.style.display = "none";
+
+            // Add the link to DOM
+            document.body.appendChild(downloadLink);
+
+            // Click download link
+            downloadLink.click();
+        }
+
+
+        function exportTableToCSV(filename) {
+            var csv = [];
+            // var textToSave = document.getElementById('fixed-bottom').innerHTML;
+            var rows = document.querySelectorAll("table tr");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+
+                for (var j = 0; j < cols.length; j++)
+                    row.push(cols[j].innerText);
+
+                csv.push(row.join(";"));
+            }
+
+            // Download CSV file
+            downloadCSV(csv.join("\n"), filename);
+        }
+
+        //  Disease Choice Functions
+
+        // Disease checkbox
+
+        function toggleDiseaseCheckboxes() {
+            var checkboxes = document.querySelectorAll('.disease');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_diseases");
+
+        }
+
+
+        // Age checkbox
+        function toggleAgeCheckboxes() {
+            var checkboxes = document.querySelectorAll('.age');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_ages");
+
+        }
+
+        // Genotype checkbox
+        function toggleGenotypeCheckboxes() {
+            var checkboxes = document.querySelectorAll('.genotype');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_genotypes");
+
+        }
+
+
+        // Blood Group checkbox
+        function toggleBloodGroupCheckboxes() {
+            var checkboxes = document.querySelectorAll('.blood_group');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_blood_groups");
+
+        }
+
+
+
+        // Category checkbox
+        function toggleDiseaseCategoryCheckboxes() {
+            var checkboxes = document.querySelectorAll('.category');
+            var allChecked = true;
+            checkboxes.forEach(function (checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+                checkbox.checked = !allChecked;
+            });
+            var checkAllButton = document.getElementById("checkAll_disease_categories");
+
+        }
+
+
+    </script>
+
+
+
+
+
+    <script src="/static/dist/markers.js"></script>
+
+    <script src="/static/dist/diseases.js"></script>
+
+
+
+
+    <script>
+        function mark_notification_as_read(notification_id) {
+            $.ajax({
+                url: "/message/notification/",
+                type: "POST",
+                data: {
+                    notification_id: notification_id,
+                    csrfmiddlewaretoken: "n7Mq27QmrejIBX3GUEFeYTMRwvYA73B3rNRXGeI0tDN1obqnglkZFRDDiutG1G7C",
+                },
+                success: function () {
+                    // Reload the page or update the UI to mark the notification as read
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        //
+
+        $(document).ready(function () {
+            // Add click event handler to the back-to-top button
+            $('.back-to-top').on('click', function (e) {
+                e.preventDefault();
+
+                // Get the offset top position of the target element
+                var targetOffset = $('#blue-nav').offset().top;
+
+                // Scroll smoothly to the target element
+                $('html, body').animate({ scrollTop: targetOffset }, 800);
+            });
+        });
+
+        // Forum Like
+        $(".like").click(function (e) {
+            var id = this.id;
+            var href = "/forum/post/like/"; // set href directly
+            e.preventDefault();
+
+            $.ajax({
+                url: href,
+                data: {
+                    'likeId': id
+                },
+                success: function (response) {
+                    if (response.liked) {
+                        $('#likebtn' + id).html("Unlike | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "red")
+                    }
+                    else {
+                        $('#likebtn' + id).html("Like | " + response.likes_count);
+                        $('#likebtn' + id).css("color", "green")
+                    }
+                }
+            })
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

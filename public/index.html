@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Home | Geodatapals </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="styles/index.css">
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598551111391475"
+    crossorigin="anonymous"></script>
+
+  <!-- Remove Add Blockers -->
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-5598551111391475?ers=1"
+    nonce="KbNlHiNnc3EKTFZZgkiPgA"></script>
+  <script
+    nonce="KbNlHiNnc3EKTFZZgkiPgA">(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+  <!-- Open Graph meta tags -->
+
+  <meta property="og:title" content=" Welcome to Geodatapals" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.geodatapals.com/media/og_images/supply_chain_map.png" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@finyfrank" />
+  <meta property="og:description" content="Welcome to Geodatapals" />
+  <meta property="og:site_name" content="Geodatapals" />
+
+
+  <!-- Favicons -->
+  <base href="/" />
+  <link href="/static/img/favicon.png" rel="icon">
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" style="width:100px">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Leaflet -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <!-- Vendor CSS Files -->
+
+  <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="/static/dist/style.css">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <!-- <link href="/static/css/profile.css" rel="stylesheet"> -->
+  <!-- Links of CSS files -->
+  <!-- <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="/static/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/static/assets/css/remixicon.css">
+  <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+    integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css"> -->
+  <link rel="stylesheet" href="/static/assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="/static/assets/css/simplebar.min.css">
+  <link rel="stylesheet" href="/static/assets/css/metismenu.min.css">
+  <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/static/assets/css/style.css">
+  <link rel="stylesheet" href="/static/assets/css/responsive.css">
+
+  <!-- Leaflet css files -->
+
+  <link rel="stylesheet" href="/static/lib/leaflet-measure.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="/static/lib/MarkerCluster.css" />
+  <link rel="stylesheet" href="/static/lib/Control-Sidebar.css">
+  <link rel="stylesheet" href="/static/lib/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="/static/lib/Leaflet.StyledLayerControl-master/css/styledLayerControl.css">
+  <link rel="stylesheet" href="/static/lib/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+  <script src="/static/ckeditor/ckeditor-init.js"></script>
+  <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+  <!-- Leaflet css files -->
+
+  <link rel="stylesheet" href="/static/dist/style.css">
+
+
+  <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <!-- Start Main Content Wrapper Area -->
+  <div class="main-content-wrapper d-flex flex-column" style="background-color: #e1e9e6;">
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center">
+      <!-- <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@geodatapals.com"><span style="font-size: 12px;">info@geodatapals.com</span></a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span style="font-size: 11px;">+49 1520 3049167</span></i>
+
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/geodatapals" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div> -->
+    </section>
+
+    <!-- ZUSt start -->
+
+
+    <!-- Start Navbar Area -->
+    <div class="navbar-area" style="margin-bottom: 10px; background-color:#106eea">
+      <div class="main-responsive-nav">
+        <div class="main-responsive-menu">
+          <div class="responsive-burger-menu d-lg-none d-block">
+            <span class="top-bar"></span>
+            <span class="middle-bar"></span>
+            <span class="bottom-bar"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <img src="/static/img/apple-touch-icon.png" style="height:50px; margin-top: -5px " alt="image">
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-burger-menu m-auto">
+
+
+
+              <span class="top-bar"></span>
+              <span class="middle-bar"></span>
+              <span class="bottom-bar"></span>
+            </div>
+
+            <div class="search-box m-auto" id="search">
+              <form method="get" action="/search" style="color:blue;">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                  value="m3DAlEOZYmFmerX8MP6OAoxrLGlYJ4JFqJI7ZLGD0L9F1FkP8wLzhmodxFQ4DHfe">
+                <input type="text" name="q" class="input-search"
+                  style="background-color:#106eea; border: 2px solid white" placeholder="Search...">
+                <button type="submit"><i class="ri-search-line"></i></button>
+              </form>
+            </div>
+
+            <div class="others-options d-flex align-items-center">
+              <div class="option-item">
+                <a href="/" class="home-btn"><i class="flaticon-home" style="padding-bottom: 20%;"></i></a>
+              </div>
+
+              <div class="option-item">
+                <div class="dropdown language-option">
+                  <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="flaticon-global"></i>
+                    <span class="lang-name"></span>
+                  </button>
+
+                  <!-- <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uk.png" alt="flag">
+                                                Geoportal
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/china.png" alt="flag">
+                                                简体中文
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uae.png" alt="flag">
+                                                العربيّة
+                                            </a>
+                                        </div> -->
+
+                  <div class="dropdown-menu language-dropdown-menu">
+                    <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+
+                      Health Mapper
+                    </a>
+                    <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                      Supply Chain Mapper
+                    </a>
+                    <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                      Water Availability Map
+                    </a>
+                    <a class="dropdown-item" href="/geoportal/disease_map/">
+                      Disease Tracking Map
+
+                    </a>
+                    <a class="dropdown-item" href="/geoportal/environmental_pollution_map/" href="#">
+                      Environmental Pollution Map
+
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="others-option-for-responsive">
+        <!-- <div class="container" style="margin-top: 20px;"> -->
+        <div class="container" style="margin-top: -4px;">
+          <div class="dot-menu">
+            <div class="inner">
+              <i class="bi bi-menu-down mobile-nav-toggle" style="color: #fff;">
+
+              </i>
+            </div>
+
+          </div>
+
+          <div class="container" style="background-color:#106eea;">
+            <div class="option-inner">
+              <div class="others-options d-flex align-items-center">
+                <div class="option-item">
+                  <a href="/" class="home-btn"><i class="flaticon-home"></i></a>
+                </div>
+
+                <!-- ####### Start Notifications -->
+
+                <!-- ##### End Notifications  -->
+                <div class="option-item">
+                  <div class="dropdown language-option">
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <i class="flaticon-global"></i>
+                      <span class="lang-name"></span>
+                    </button>
+
+
+                    <div class="dropdown-menu language-dropdown-menu">
+
+                      <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+
+                        Health Mapper
+                      </a>
+                      <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                        Supply Chain Mapper
+                      </a>
+                      <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                        Water Availability Map
+                      </a>
+                      <a class="dropdown-item" href="/geoportal/disease_map/">
+                        Disease Tracking Map
+
+                      </a>
+                      <a class="dropdown-item" href="/geoportal/environmental_pollution_map/" href="#">
+                        Environmental Pollution Map
+
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="option-item">
+                  <div class="search-box" id="search">
+                    <form method="get" action="/search" style="color:white;">
+                      <input type="hidden" name="csrfmiddlewaretoken"
+                        value="m3DAlEOZYmFmerX8MP6OAoxrLGlYJ4JFqJI7ZLGD0L9F1FkP8wLzhmodxFQ4DHfe">
+                      <!-- <input type="text" name="q" class="input-search" style="background-color:#106eea;color:white; border: 2px solid white" placeholder="Search..."> -->
+                      <input type="text" name="q" class="input-search"
+                        style="background-color:white;color:blue; border: 2px solid white" placeholder="Search...">
+                      <button type="submit"><i class="ri-search-line"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar Area -->
+
+    <!-- Start Sidemenu Area -->
+    <div class="sidemenu-area">
+      <div class="responsive-burger-menu d-lg-none d-block">
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+      </div>
+
+      <div class="sidemenu-body">
+        <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+
+
+
+
+
+          <li class="nav-item">
+            <a href="/accounts/register/" class="nav-link">
+              <span class="icon"><i class="flaticon-information"></i></span>
+              <span class="menu-title">Register</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/accounts/login/" class="nav-link">
+              <span class="icon"><i class="flaticon-user"></i></span>
+              <span class="menu-title">Login</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="/blog/" class="nav-link">
+              <span class="icon"><i class="flaticon-newspaper"></i></span>
+              <span class="menu-title"> Blog Posts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/forum/" class="nav-link">
+              <span class="icon"><i class="flaticon-friends"></i></span>
+              <span class="menu-title">Forum</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/forum/events/" class="nav-link">
+              <span class="icon"><i class="flaticon-calendar"></i></span>
+              <span class="menu-title">Events</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/careers/gis/data-science/learning/" class="nav-link">
+              <span class="icon"><i class="flaticon-newspaper"></i></span>
+              <span class="menu-title">Learning</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/business/product/marketplace/" class="nav-link">
+              <span class="icon"><i class="flaticon-online-shopping"></i></span>
+              <span class="menu-title">Marketplace</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- End Sidemenu Area -->
+
+
+    <!-- ZUst End -->
+
+
+    <!-- ======= Header ======= -->
+
+
+    <header id="header" class="d-flex align-items-center" style="margin-top: 12px;">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="logo"><a href="/">Geodatapals<span>.</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png" alt=""></a>-->
+
+        <nav id="navbar" class="navbar">
+          <ul>
+
+
+            <li><a href="/">
+                <p style="border-bottom: 2px solid #106eea; font-weight:bold ">Home</p>
+              </a></li>
+            <li><a class="nav-link scrollto" href="/forum/"> Forum</a></li>
+            <li><a class="nav-link scrollto" href="/blog/">Blog</a></li>
+            <li><a class="nav-link scrollto" href="/forum/events/">Events</a></li>
+            <li><a class="nav-link scrollto" href="/careers/jobs/">Careers</a></li>
+            <li><a class="nav-link scrollto" href="/careers/gis/data-science/learning/">Learning</a></li>
+            <li><a class="nav-link scrollto" href="/business/product/marketplace/">Marketplace</a></li>
+
+
+
+            <li><a class="nav-link scrollto" href="#services">Services</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+
+
+
+
+
+            <li><a class="nav-link scrollto" id='lgin' href="/accounts/login/"><button
+                  class="btn btn-primary">Login</button></a></li>
+
+
+
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle" style="display: none;"></i>
+        </nav><!-- .navbar -->
+
+      </div>
+
+    </header><!-- End Header -->
+
+
+    <p id="blue-nav"></p>
+
+
+
+    <!-- ======= Hero Section ======= -->
+    <!-- In the message partials we configure what gets displayed in our messages -->
+    <!-- We check if there is  a msessge -->
+
+
+    <section id="hero" class="d-flex align-items-center">
+
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1>Welcome to <span>Geodatapals</span></h1>
+        <h2>
+          We are team of talented Software Developers, GIS Analysts and IT professionals specialized in
+          providing
+          smart location Intelligent business solutions. Explore our Maps and database to make informative
+          decisions
+          for your business.
+
+        </h2>
+        <div class="d-flex">
+          <a href="/business/supply_chain_mapper/" class="btn-get-started">Explore</a>
+          <!--<a-->
+          <!--  href="/static/img/gis_poc_demo.mp4"-->
+          <!--  class="glightbox btn-watch-video"-->
+          <!--  ><i class="bi bi-play-circle"></i><span>Watch Video</span>-->
+          <!--  </a>-->
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= Featured Services Section ======= -->
+      <section id="featured-services" class="featured-services">
+
+        <div class="container" data-aos="fade-up">
+
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="bx bx-world"></i></div>
+
+                <h4 class="title"><a href="/business/supply_chain_mapper/">Get your business on the
+                    Map</a></h4>
+                <a href="/business/supply_chain_mapper/">
+                  <p class="description">
+
+                    Place your business on the map and make it easy for
+                    people in your area to locate you. Our Supply Chain Mapper gives you
+                    an overview of the entire supply chain for your product covering Raw material
+                    Sourcing, Production,
+                    Wholesale/Distribution Logistics, to Retail/Sales and other Business Services
+
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="bx bx-current-location"></i></div>
+
+                <h4 class="title"><a href="#contact">Apply Location Intelligence to improve your
+                    Business</a></h4>
+                <a href="#contact">
+                  <p class="description">
+                    Get custom GIS solutions for your business. Make sense out of your
+                    data and get the best possible location for your business. We conduct business
+                    surveys
+                    and generate data according to your needs. Businesses with Distributed
+                    Infrastructure across a region benefit most from our location based analysis.
+
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="bx bx-hotel"></i></div>
+                <h4 class="title">
+                  <a href="/geoportal/disease_map/">Health, Safety and Environmental Data</a>
+                </h4>
+                <a href="/geoportal/disease_map/">
+                  <p class="description">
+                    Our Health Mapper provides real-time information on the health status of your
+                    environment. As part of our contribution to the United Nations SDG goals,
+                    We conduct regular Health, Safety and Environmental research programs which
+                    generates publicly exposed and accesible data to support disease control and
+                    eradication efforts.
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-desktop"></i></div>
+                <h4 class="title"><a href="">IT Training and Internship</a></h4>
+                <p class="description">
+                  Take advantage of our high skilled IT training to prepare yourself for the future.
+                  We offer regular paid
+                  internships for the best participants of our training programs. Our programs
+                  include, Software Development, Data science,
+                  Geographical Information Systems (GIS) and Database managememt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Featured Services Section -->
+
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About</h2>
+            <h3>Find Out More <span>About Us</span></h3>
+            <p>
+              Geodatapals is a platform where geospatial solutions are provided by
+              top experts in the field. We develop Web based GIS solutions that tackle real world
+              problems.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+              <img src="/static/img/about.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
+              data-aos-delay="100">
+
+              </h2>
+              <h3>
+                We employ state of the art geospatial techniques to get insights from the most remote
+                places on the planet.
+              </h3>
+
+              </p>
+              <ul>
+                <li>
+                  <i class="bx bx-store-alt"></i>
+                  <div>
+                    <h5>Visualize your assets on a Map</h5>
+                    <p>
+                      We provide a visual representation of your assets, projects and supply chain
+                      on a customized map.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bx bx-images"></i>
+                  <div>
+                    <h5>Use the power of Geospatial Insight to improve your business</h5>
+                    <p>
+                      Our goal is to empower businesses with valuable insights and tools that
+                      optimize operations, improve efficiency, and enhance decision-making
+                      processes.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <p>
+                Geodatapals helps you acheive your dreams by combining the power of Geographical
+                Information Systems (GIS), Software development and Data science to give you exceptional
+                insight on your business.
+                We design state of the art cloud based solution, which are cost effective and easy to
+                maintain. We provide all year long support which helps you get used to our solutions.
+                Our focus is on leveraging geospatial data to help businesses make informed decisions
+                and drive success.
+                Join us in revolutionizing the way businesses utilize location intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Skills Section ======= -->
+      <!-- <section id="skills" class="skills">
+    <div class="container" data-aos="fade-up">
+      <div class="row skills-content">
+        <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">Web Development <i class="val">99%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="99"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">Web Mapping <i class="val">98%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="98"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">Data Analysis <i class="val">85%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="85"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="progress">
+            <span class="skill">Python <i class="val">92%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="92"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-4">
+          <div class="progress">
+            <span class="skill">Django <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-4">
+          <div class="progress">
+            <span class="skill">GIS<i class="val">98%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="98"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-lg-4">
+          <div class="progress">
+            <span class="skill">BIM <i class="val">98%</i></span>
+            <div class="progress-bar-wrap">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-valuenow="98"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Skills Section -->
+
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-emoji-smile"></i>
+                <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Maps Database</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+              <div class="count-box">
+                <i class="bi bi-journal-richtext"></i>
+                <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Businesses</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div class="count-box">
+                <i class="bi bi-headset"></i>
+                <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Discussions </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+              <div class="count-box">
+                <i class="bi bi-people"></i>
+                <span data-purecounter-start="0" data-purecounter-end="63" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <p>Community</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <!-- ======= Clients Section ======= -->
+      <!-- <section id="clients" class="clients section-bg">
+    <div class="container" data-aos="zoom-in">
+      <div class="row">
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-1.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-2.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-3.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-4.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-5.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="/static/img/clients/client-6.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Clients Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Services</h2>
+            <h3>Check our <span>Services</span></h3>
+            <p>
+              We provide a range of services in the IT sector. This depends
+              specifically on your demands. We have experts who are 24 hours ready
+              to work on your project irrespective of time zone
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="">Software Development</a></h4>
+                <p>
+                  We develope both static and dynamic websites. We build web apps
+                  with multiple functionalities. Our tech stack are one of the
+                  latest in the industry.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-slideshow"></i></div>
+                <h4><a href="">Geospatial Analysis</a></h4>
+                <p>
+                  We provide Geospatial and GIS analysis ranging from satellite images, open street
+                  maps (OSM) data and other forms of geospatial data.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+              data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4><a href="">Web Mapping</a></h4>
+                <p>
+                  We build quality web maps with state of the art visualization tool. We provide
+                  capacity to filter and analyse geographical data on web maps
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+              data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">Data Analysis</a></h4>
+                <p>
+                  Want to make sense of several layers of data. Bring it to us. We Analyse data from
+                  various fields of science. Our data services come with standard visualization and
+                  detailed documentantion.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">Dashboard Design</a></h4>
+                <p>
+                  We design interactive dashboards for data visualization. We customize this
+                  dashboards to fit your business needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-arch"></i></div>
+                <h4><a href="">Career Coaching</a></h4>
+                <p>
+                  Do you have dreams of becoming like us?. We can guide you through your career.
+                  We provide the necessary training and coaching needed to excel in the field of
+                  Information Technology (IT).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+
+      <!-- ======= Testimonials Section ======= -->
+      <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="section-title">
+              <h2>Community</h2>
+              <h3><span>Recent Topics</span></h3>
+              <p></p>
+            </div>
+
+            <div class="swiper-wrapper">
+
+
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+
+                <div class="testimonial-item">
+                  <a href="/forum/post/2/GIS/">
+                    <img src="/media/users/profile_pictures/Profile_pics.jpeg" class="testimonial-img" alt="" />
+                    <h3>Innocent Okaro</h3>
+                    <h4>GIS Analyst/Developer</h4>
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      First GIS lesson Coming soon
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                  </a>
+                </div>
+
+              </div>
+
+
+              <!-- End testimonial item -->
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+
+      <!-- ======= Portfolio Section ======= -->
+      <!-- <section id="portfolio" class="portfolio">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <h3>Check our <span>Portfolio</span></h3>
+        <p>
+          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
+          adipisci expedita at voluptas atque vitae autem.
+        </p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="row portfolio-container"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img
+            src="/static/img/portfolio/portfolio-1.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>App 1</h4>
+            <p>App</p>
+            <a
+              href="/static/img/portfolio/portfolio-1.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="App 1"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img
+            src="/static/img/portfolio/portfolio-2.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a
+              href="/static/img/portfolio/portfolio-2.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Web 3"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img
+            src="/static/img/portfolio/portfolio-3.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>App 2</h4>
+            <p>App</p>
+            <a
+              href="/static/img/portfolio/portfolio-3.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="App 2"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img
+            src="/static/img/portfolio/portfolio-4.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Card 2</h4>
+            <p>Card</p>
+            <a
+              href="/static/img/portfolio/portfolio-4.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Card 2"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img
+            src="/static/img/portfolio/portfolio-5.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Web 2</h4>
+            <p>Web</p>
+            <a
+              href="/static/img/portfolio/portfolio-5.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Web 2"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img
+            src="/static/img/portfolio/portfolio-6.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>App 3</h4>
+            <p>App</p>
+            <a
+              href="/static/img/portfolio/portfolio-6.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="App 3"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img
+            src="/static/img/portfolio/portfolio-7.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Card 1</h4>
+            <p>Card</p>
+            <a
+              href="/static/img/portfolio/portfolio-7.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Card 1"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <img
+            src="/static/img/portfolio/portfolio-8.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Card 3</h4>
+            <p>Card</p>
+            <a
+              href="/static/img/portfolio/portfolio-8.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Card 3"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <img
+            src="/static/img/portfolio/portfolio-9.jpg"
+            class="img-fluid"
+            alt=""
+          />
+          <div class="portfolio-info">
+            <h4>Web 3</h4>
+            <p>Web</p>
+            <a
+              href="/static/img/portfolio/portfolio-9.jpg"
+              data-gallery="portfolioGallery"
+              class="portfolio-lightbox preview-link"
+              title="Web 3"
+              ><i class="bx bx-plus"></i
+            ></a>
+            <a
+              href="portfolio-details.html"
+              class="details-link"
+              title="More Details"
+              ><i class="bx bx-link"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Portfolio Section -->
+
+      <!-- ======= Team Section ======= -->
+      <!-- <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Team</h2>
+        <h3>Our Hardworking <span>Team</span></h3>
+        <p>
+          Meet our dedicated team working 24/7 the give you the best value for your business.
+        </p>
+      </div>
+
+      <div class="row">
+        <div
+          class="col-lg-3 col-md-6 d-flex align-items-stretch"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="/static/img/team/ifeanyi.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Ifeanyi Okaro</h4>
+              <span>Founder/CEO</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 d-flex align-items-stretch"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="/static/img/team/team-2.jpg"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Sarah Jhonson</h4>
+              <span>Product Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 d-flex align-items-stretch"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="/static/img/team/Amala4.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Amala Okeke</h4>
+              <span>CTO</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 d-flex align-items-stretch"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="member">
+            <div class="member-img">
+              <img
+                src="/static/img/team/Umar.png"
+                class="img-fluid"
+                alt=""
+              />
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+            <div class="member-info">
+              <h4>Umar Ekele Ahmed</h4>
+              <span>Lead Geospatial Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Team Section -->
+
+      <!-- ======= Pricing Section ======= -->
+      <!-- <section id="pricing" class="pricing">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Pricing</h2>
+        <h3>Check our <span>Pricing</span></h3>
+        <p>
+          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
+          adipisci expedita at voluptas atque vitae autem.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="box">
+            <h3>Free</h3>
+            <h4><sup>$</sup>0<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li class="na">Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 mt-4 mt-md-0"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="box featured">
+            <h3>Business</h3>
+            <h4><sup>$</sup>19<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li>Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 mt-4 mt-lg-0"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="box">
+            <h3>Developer</h3>
+            <h4><sup>$</sup>29<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li>Pharetra massa</li>
+              <li>Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-lg-3 col-md-6 mt-4 mt-lg-0"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="box">
+            <span class="advanced">Advanced</span>
+            <h3>Ultimate</h3>
+            <h4><sup>$</sup>49<span> / month</span></h4>
+            <ul>
+              <li>Aida dere</li>
+              <li>Nec feugiat nisl</li>
+              <li>Nulla at volutpat dola</li>
+              <li>Pharetra massa</li>
+              <li>Massa ultricies mi</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Pricing Section -->
+
+      <!-- ======= Frequently Asked Questions Section ======= -->
+      <!-- <section id="faq" class="faq section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>F.A.Q</h2>
+        <h3>Frequently Asked <span>Questions</span></h3>
+        <p>
+          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
+          adipisci expedita at voluptas atque vitae autem.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <ul class="faq-list">
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                class="collapsed question"
+                href="#faq1"
+              >
+                Non consectetur a erat nam at lectus urna duis?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
+                  volutpat lacus laoreet non curabitur gravida. Venenatis lectus
+                  magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq2"
+                class="collapsed question"
+              >
+                Feugiat scelerisque varius morbi enim nunc faucibus a
+                pellentesque? <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque
+                  habitant morbi. Id interdum velit laoreet id donec ultrices.
+                  Fringilla phasellus faucibus scelerisque eleifend donec
+                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
+                  ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq3"
+                class="collapsed question"
+              >
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                morbi? <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices
+                  sagittis orci. Faucibus pulvinar elementum integer enim. Sem
+                  nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
+                  pellentesque eu tincidunt. Lectus urna duis convallis
+                  convallis tellus. Urna molestie at elementum eu facilisis sed
+                  odio morbi quis
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq4"
+                class="collapsed question"
+              >
+                Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque
+                  habitant morbi. Id interdum velit laoreet id donec ultrices.
+                  Fringilla phasellus faucibus scelerisque eleifend donec
+                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
+                  ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq5"
+                class="collapsed question"
+              >
+                Tempus quam pellentesque nec nam aliquam sem et tortor
+                consequat? <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo.
+                  Dignissim suspendisse in est ante in. Nunc vel risus commodo
+                  viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
+                  bibendum est. Purus gravida quis blandit turpis cursus in
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq6"
+                class="collapsed question"
+              >
+                Tortor vitae purus faucibus ornare. Varius vel pharetra vel
+                turpis nunc eget lorem dolor?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris
+                  vitae ultricies leo integer malesuada nunc vel. Tincidunt eget
+                  nullam non nisi est sit amet. Turpis nunc eget lorem dolor
+                  sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                  Pellentesque diam volutpat commodo sed egestas egestas
+                  fringilla phasellus faucibus. Nibh tellus molestie nunc non
+                  blandit massa enim nec.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      <!-- End Frequently Asked Questions Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <h3><span>Contact Us</span></h3>
+            <p>
+              Do your want to make enquiries? then reach out to us today using any of our contact
+              channels.
+            </p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+
+                <i class="bx bx-map"></i>
+                <h3>Europe</h3>
+                <p> Schmeiderberger Weg 1,
+                  <br>
+                  10318 Berlin, Germany.
+                </p>
+                <br />
+                <i class="bx bx-map"></i>
+                <h3>Africa</h3>
+                <p>No 11, 21 Road Efab Estate Lokogoma,
+                  <br>
+                  900107 Abuja, NG.
+                </p>
+              </div>
+
+
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-envelope"></i>
+                <h3>Email Us</h3>
+                <p>info@geodatapals.com</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box mb-4">
+                <i class="bx bx-phone-call"></i>
+                <h3>Call Us</h3>
+                <p>+49 1522 343 1867, +234 813 555 4976</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.6706336665716!2d13.514989700000001!3d52.485099000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a848d516303dbf%3A0x47538c747e0ba7b8!2sSchmiedeberger%20Weg%201%2C%2010318%20Berlin!5e0!3m2!1sen!2sde!4v1686501248709!5m2!1sen!2sde"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+
+
+            <div class="col-lg-6">
+              <form action="/inquiry" method="post" role="form" class="email-form">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                  value="m3DAlEOZYmFmerX8MP6OAoxrLGlYJ4JFqJI7ZLGD0L9F1FkP8wLzhmodxFQ4DHfe">
+                <div class="row">
+                  <div class="col form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+                  </div>
+                  <div class="col form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                      required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required />
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+
+    <meta property="og:title" content=" Welcome to Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/supply_chain_map.png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Welcome to Geodatapals" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <h4>Join Our Newsletter</h4>
+              <p>Subscribe to our newletter to get first hand information on our projects !!</p>
+
+              <form method="post" action="/mail_list">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                  value="m3DAlEOZYmFmerX8MP6OAoxrLGlYJ4JFqJI7ZLGD0L9F1FkP8wLzhmodxFQ4DHfe">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Geodatapals<span>.</span></h3>
+              <p>
+                No 11, 21 Road, <br>
+                Efab Estate Lokogoma, <br>
+                900107 Abuja,<br>
+                Nigeria. <br><br>
+                <strong>Phone:</strong> +4915203049167<br>
+                <strong>Email:</strong> info@geodatapals.com<br>
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Terms of service</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/privacy">Privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Web Mapping</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Software Development</a>
+                </li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Geospatial Analysis</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">IT Training</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#services">Data Science</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>Follow our social media pages to get the lastest updates on our products</p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/geodatapals" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/people/Geodatapals/100083605425858/" class="facebook"><i
+                    class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/geodatapals/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                <a href="https://www.linkedin.com/company/geodatapals" class="linkedin"><i
+                    class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Geodatapals</span></strong>. All Rights Reserved
+        </div>
+        <!--<div class="credits">-->
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+        <!--  Designed <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+        <!--</div>-->
+      </div>
+
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="/static/vendor/swiper/swiper-bundle.min.js.map"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/static/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/static/dist/main.js"></script>
+
+    <!-- Links of JS files -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/assets/js/jquery-ui.min.js"></script>
+    <script src="/static/assets/js/simplebar.min.js"></script>
+    <script src="/static/assets/js/metismenu.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/wow.min.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+
+
+
+
+
+
+
+
+    <!-- Mapscripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"
+      integrity="sha512-Oj9plGLST4IMXFXDfqMdTP+gSInbodkyno117PSjo5R08eu6TdzY9WPnnwQZGx2O2lG/kN0MzQk95ulWsRFuLA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- begin libraries -->
+
+
+    <!--    *****  Begin Leaflet.Draw-->
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="/static/lib/leaflet.geometryutil.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.draw.js"></script>
+    <script src="/static/lib/leaflet-draw/Leaflet.Draw.Event.js"></script>
+    <link rel="stylesheet" href="/static/lib/leaflet-draw/leaflet.draw.css" />
+
+    <script src="/static/lib/leaflet-draw/Toolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/Tooltip.js"></script>
+
+    <script src="/static/lib/leaflet-draw/ext/GeometryUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LatLngUtil.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/LineUtil.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polygon.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/Polyline.Intersect.js"></script>
+    <script src="/static/lib/leaflet-draw/ext/TouchEvents.js"></script>
+
+    <script src="/static/lib/leaflet-draw/draw/DrawToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Feature.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polyline.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Marker.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polygon.js"></script>
+    <script src="/static/lib/leaflet-draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+    <script src="/static/lib/leaflet-draw/edit/EditToolbar.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Delete.js"></script>
+
+    <script src="/static/lib/leaflet-draw/Control.Draw.js"></script>
+
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Poly.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Circle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Rectangle.js"></script>
+    <script src="/static/lib/leaflet-draw/edit/handler/Edit.Marker.js"></script>
+
+    <!--    ******  End of Lealet Draw-->
+    <script type="text/javascript" src="/static/lib/leaflet.browser.print.min.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet-measure.js"></script>
+
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script type="text/javascript" src="/static/lib/leaflet.markercluster.js"></script>
+    <script type="text/javascript"
+      src="/static/lib/Leaflet.StyledLayerControl-master/src/styledLayerControl.js"></script>
+    <script src="/static/lib/Control-Sidebar.js"></script>
+    <script src="/static/dist/supply_chain_examples.js"></script>
+
+    <script src="/static/lib/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrSb7Uq81AMmOIJMozrW6j8wYirtQhyiY&libraries=geometry,places"></script> -->
+
+
+
+    <!-- end libraries -->
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      function mark_notification_as_read(notification_id) {
+        $.ajax({
+          url: "/message/notification/",
+          type: "POST",
+          data: {
+            notification_id: notification_id,
+            csrfmiddlewaretoken: "m3DAlEOZYmFmerX8MP6OAoxrLGlYJ4JFqJI7ZLGD0L9F1FkP8wLzhmodxFQ4DHfe",
+          },
+          success: function () {
+            // Reload the page or update the UI to mark the notification as read
+          },
+          error: function (xhr, status, error) {
+            console.log(error);
+          }
+        });
+      }
+
+      //
+
+      $(document).ready(function () {
+        // Add click event handler to the back-to-top button
+        $('.back-to-top').on('click', function (e) {
+          e.preventDefault();
+
+          // Get the offset top position of the target element
+          var targetOffset = $('#blue-nav').offset().top;
+
+          // Scroll smoothly to the target element
+          $('html, body').animate({ scrollTop: targetOffset }, 800);
+        });
+      });
+
+      // Forum Like
+      $(".like").click(function (e) {
+        var id = this.id;
+        var href = "/forum/post/like/"; // set href directly
+        e.preventDefault();
+
+        $.ajax({
+          url: href,
+          data: {
+            'likeId': id
+          },
+          success: function (response) {
+            if (response.liked) {
+              $('#likebtn' + id).html("Unlike | " + response.likes_count);
+              $('#likebtn' + id).css("color", "red")
+            }
+            else {
+              $('#likebtn' + id).html("Like | " + response.likes_count);
+              $('#likebtn' + id).css("color", "green")
+            }
+          }
+        })
+      });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

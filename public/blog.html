@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title> Blog | Geodatapals </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="styles/blog.css">
+
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598551111391475"
+        crossorigin="anonymous"></script>
+
+    <!-- Remove Add Blockers -->
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-5598551111391475?ers=1"
+        nonce="KbNlHiNnc3EKTFZZgkiPgA"></script>
+    <script
+        nonce="KbNlHiNnc3EKTFZZgkiPgA">(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+    <!-- Open Graph meta tags -->
+
+    <meta property="og:title" content="Blog | Geodatapals" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.geodatapals.com/media/og_images/supply_chain_map.png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@finyfrank" />
+    <meta property="og:description" content="Blog posts" />
+    <meta property="og:site_name" content="Geodatapals" />
+
+
+    <!-- Favicons -->
+    <base href="/" />
+    <link href="/static/img/favicon.png" rel="icon">
+    <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" style="width:100px">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Leaflet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- Vendor CSS Files -->
+
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="/static/dist/style.css">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!-- <link href="/static/css/profile.css" rel="stylesheet"> -->
+    <!-- Links of CSS files -->
+    <!-- <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/static/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+        integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="/static/assets/css/simplebar.min.css">
+    <link rel="stylesheet" href="/static/assets/css/metismenu.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/lib/leaflet-measure.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.css" />
+    <link rel="stylesheet" href="/static/lib/Control-Sidebar.css">
+    <link rel="stylesheet" href="/static/lib/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/static/lib/Leaflet.StyledLayerControl-master/css/styledLayerControl.css">
+    <link rel="stylesheet" href="/static/lib/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.css">
+    <script src="/static/ckeditor/ckeditor-init.js"></script>
+    <script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+    <!-- Leaflet css files -->
+
+    <link rel="stylesheet" href="/static/dist/style.css">
+
+
+
+    <!-- =======================================================
+  * Template Name: BizLand - v3.9.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Start Main Content Wrapper Area -->
+    <div class="main-content-wrapper d-flex flex-column" style="background-color: #e1e9e6;">
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <!-- <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@geodatapals.com"><span style="font-size: 12px;">info@geodatapals.com</span></a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span style="font-size: 11px;">+49 1520 3049167</span></i>
+
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="https://twitter.com/geodatapals" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div> -->
+        </section>
+
+        <!-- ZUSt start -->
+
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area" style="margin-bottom: 10px; background-color:#106eea">
+            <div class="main-responsive-nav">
+                <div class="main-responsive-menu">
+                    <div class="responsive-burger-menu d-lg-none d-block">
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-navbar">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+                        <img src="/static/img/apple-touch-icon.png" style="height:50px; margin-top: -5px " alt="image">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="navbar-burger-menu m-auto">
+
+
+
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+
+                        <div class="search-box m-auto" id="search">
+                            <form method="get" action="/search" style="color:blue;">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="hVxNpT2jhW853XYBasWKhNnPo9zShFLzlBCk30UXjlCoQbliw9BvYLeBa84Ybih8">
+                                <input type="text" name="q" class="input-search"
+                                    style="background-color:#106eea; border: 2px solid white" placeholder="Search...">
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <a href="/" class="home-btn"><i class="flaticon-home"
+                                        style="padding-bottom: 20%;"></i></a>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="dropdown language-option">
+                                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <i class="flaticon-global"></i>
+                                        <span class="lang-name"></span>
+                                    </button>
+
+                                    <!-- <div class="dropdown-menu language-dropdown-menu">
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uk.png" alt="flag">
+                                                Geoportal
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/china.png" alt="flag">
+                                                简体中文
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/images/uae.png" alt="flag">
+                                                العربيّة
+                                            </a>
+                                        </div> -->
+
+                                    <div class="dropdown-menu language-dropdown-menu">
+                                        <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+
+                                            Health Mapper
+                                        </a>
+                                        <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                            Supply Chain Mapper
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                            Water Availability Map
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/disease_map/">
+                                            Disease Tracking Map
+
+                                        </a>
+                                        <a class="dropdown-item" href="/geoportal/environmental_pollution_map/"
+                                            href="#">
+                                            Environmental Pollution Map
+
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="others-option-for-responsive">
+                <!-- <div class="container" style="margin-top: 20px;"> -->
+                <div class="container" style="margin-top: -4px;">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <i class="bi bi-menu-down mobile-nav-toggle" style="color: #fff;">
+
+                            </i>
+                        </div>
+
+                    </div>
+
+                    <div class="container" style="background-color:#106eea;">
+                        <div class="option-inner">
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <a href="/" class="home-btn"><i class="flaticon-home"></i></a>
+                                </div>
+
+                                <!-- ####### Start Notifications -->
+
+                                <!-- ##### End Notifications  -->
+                                <div class="option-item">
+                                    <div class="dropdown language-option">
+                                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <i class="flaticon-global"></i>
+                                            <span class="lang-name"></span>
+                                        </button>
+
+
+                                        <div class="dropdown-menu language-dropdown-menu">
+
+                                            <a class="dropdown-item" href="/geoportal/health_mapper/">
+
+
+                                                Health Mapper
+                                            </a>
+                                            <a class="dropdown-item" href="/business/supply_chain_mapper/">
+
+                                                Supply Chain Mapper
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/water_source_map/">
+
+                                                Water Availability Map
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/disease_map/">
+                                                Disease Tracking Map
+
+                                            </a>
+                                            <a class="dropdown-item" href="/geoportal/environmental_pollution_map/"
+                                                href="#">
+                                                Environmental Pollution Map
+
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="option-item">
+                                    <div class="search-box" id="search">
+                                        <form method="get" action="/search" style="color:white;">
+                                            <input type="hidden" name="csrfmiddlewaretoken"
+                                                value="hVxNpT2jhW853XYBasWKhNnPo9zShFLzlBCk30UXjlCoQbliw9BvYLeBa84Ybih8">
+                                            <!-- <input type="text" name="q" class="input-search" style="background-color:#106eea;color:white; border: 2px solid white" placeholder="Search..."> -->
+                                            <input type="text" name="q" class="input-search"
+                                                style="background-color:white;color:blue; border: 2px solid white"
+                                                placeholder="Search...">
+                                            <button type="submit"><i class="ri-search-line"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="responsive-burger-menu d-lg-none d-block">
+                <span class="top-bar"></span>
+                <span class="middle-bar"></span>
+                <span class="bottom-bar"></span>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="/accounts/register/" class="nav-link">
+                            <span class="icon"><i class="flaticon-information"></i></span>
+                            <span class="menu-title">Register</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/accounts/login/" class="nav-link">
+                            <span class="icon"><i class="flaticon-user"></i></span>
+                            <span class="menu-title">Login</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title"> Blog Posts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/" class="nav-link">
+                            <span class="icon"><i class="flaticon-friends"></i></span>
+                            <span class="menu-title">Forum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/forum/events/" class="nav-link">
+                            <span class="icon"><i class="flaticon-calendar"></i></span>
+                            <span class="menu-title">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/careers/gis/data-science/learning/" class="nav-link">
+                            <span class="icon"><i class="flaticon-newspaper"></i></span>
+                            <span class="menu-title">Learning</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/business/product/marketplace/" class="nav-link">
+                            <span class="icon"><i class="flaticon-online-shopping"></i></span>
+                            <span class="menu-title">Marketplace</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+
+        <!-- ZUst End -->
+
+
+        <!-- ======= Header ======= -->
+
+
+        <header id="header" class="d-flex align-items-center" style="margin-top: 12px;">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <h1 class="logo"><a href="/">Geodatapals<span>.</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo"><img src="{% static 'img/logo.png" alt=""></a>-->
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+
+
+                        <li><a href="/"> Home</a></li>
+                        <li><a class="nav-link scrollto" href="/forum/"> Forum </a></li>
+                        <li><a class="nav-link scrollto" href="/blog/">
+                                <p style="border-bottom: 2px solid #106eea; font-weight:bold ">Blog</p>
+                            </a></li>
+                        <li><a class="nav-link scrollto" href="/forum/events/">Events</a></li>
+
+
+
+
+
+
+
+                        <li><a class="nav-link scrollto" id='lgin' href="/accounts/login/"><button
+                                    class="btn btn-primary">Login</button></a></li>
+
+
+
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle" style="display: none;"></i>
+                </nav><!-- .navbar -->
+
+            </div>
+
+        </header><!-- End Header -->
+
+
+        <p id="blue-nav"></p>
+
+
+
+        <div class="tab-content" id="myTabContent" style="border-top: 3px solid #106eea">
+            <div class="tab-pane fade show active" id="timeline" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12" id="top-post">
+                        <aside class="widget-area">
+                            <div class="widget widget-suggested-groups">
+                                <h3 class="widget-title">Top Blog Stories</h3>
+
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span><img src="/media/blog_images/GIS.png" alt="" /></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a href="/blog/1/GIS-Intro/">GIS Intro</a>
+                                        </h4>
+                                        <span>218 Views</span>
+                                        <a href="/blog/1/GIS-Intro/" class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span><img src="/media/blog_images/geopandas.png" alt="" /></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a href="/blog/2/Exploring-Spatial-Data-Made-Easy-with-GeoPandas/">Exploring
+                                                Spatial Data Made Easy with GeoPandas</a>
+                                        </h4>
+                                        <span>158 Views</span>
+                                        <a href="/blog/2/Exploring-Spatial-Data-Made-Easy-with-GeoPandas/"
+                                            class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span class="fullimage bg1" role="img"></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a
+                                                href="/blog/4/Unleashing-the-Power-of-QGIS:-A-Closer-Look-at-the-Swiss-Army-Knife-of-GIS/">Unleashing
+                                                the Power of QGIS: A Closer Look at the Swiss Army Knife of GIS</a>
+                                        </h4>
+                                        <span>158 Views</span>
+                                        <a href="/blog/4/Unleashing-the-Power-of-QGIS:-A-Closer-Look-at-the-Swiss-Army-Knife-of-GIS/"
+                                            class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span><img
+                                                src="/media/blog_images/GIS-mapping-Geographic-information-systems-1030x659.jpg"
+                                                alt="" /></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a
+                                                href="/blog/5/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">Title:
+                                                Unveiling the Advancements in Geographic Information Systems (GIS)</a>
+                                        </h4>
+                                        <span>155 Views</span>
+                                        <a href="/blog/5/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/"
+                                            class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span class="fullimage bg1" role="img"></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a href="/blog/3/Navigating-the-World-of-GIS-Tools:-A-Brief-Overview/">Navigating
+                                                the World of GIS Tools: A Brief Overview</a>
+                                        </h4>
+                                        <span>150 Views</span>
+                                        <a href="/blog/3/Navigating-the-World-of-GIS-Tools:-A-Brief-Overview/"
+                                            class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- increase to limit Top Posts -->
+
+                                <article class="item">
+                                    <a href="% url 'blog_detail' post.id post.slug %}" class="thumb">
+
+                                        <span><img
+                                                src="/media/blog_images/GIS-mapping-Geographic-information-systems-1030x659_NQwadK1.jpg"
+                                                alt="" /></span>
+
+                                    </a>
+
+                                    <div class="info">
+                                        <h4 class="title">
+                                            <a
+                                                href="/blog/6/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">Title:
+                                                Unveiling the Advancements in Geographic Information Systems (GIS)</a>
+                                        </h4>
+                                        <span>133 Views</span>
+                                        <a href="/blog/6/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/"
+                                            class="join-btn">View</a>
+                                    </div>
+                                </article>
+
+                                <!-- <article class="item">
+              <a href="#" class="thumb">
+                <span class="fullimage bg2" role="img"></span>
+              </a>
+
+              <div class="info">
+                <h4 class="title">
+                  <a href="#">Job Search Group</a>
+                </h4>
+                <span>5000+ Members</span>
+                <a href="#" class="join-btn">Join Community</a>
+              </div>
+            </article>
+            <article class="item">
+              <a href="#" class="thumb">
+                <span class="fullimage bg3" role="img"></span>
+              </a>
+
+              <div class="info">
+                <h4 class="title">
+                  <a href="#">Photography Group</a>
+                </h4>
+                <span>5000+ Members</span>
+                <a href="#" class="join-btn">Join Community</a>
+              </div>
+            </article> -->
+                            </div>
+
+                            <!-- <div class="widget widget-advertisement">
+            <h3 class="widget-title">Advertisement</h3>
+
+            <div class="advertisement-image">
+              <a href="#"
+                ><img
+                  src="{% static 'assets/images/advertisement.jpg"
+                  alt="image"
+              /></a>
+            </div>
+          </div> -->
+                        </aside>
+                    </div>
+
+                    <div class="col-lg-9 col-md-12" style="background-color: white ; margin-bottom:12px">
+
+                        <div class="section-title">
+                            <h3><span> Blog Stories </span></h3>
+
+                        </div>
+
+
+                        <div class="news-feed news-feed-post">
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a
+                                    href="/blog/6/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">Title:
+                                    Unveiling the Advancements in Geographic Information Systems (GIS)</a>
+                            </h4>
+                            <small>
+                                Jan. 16, 2024 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                            </small>
+                            <a
+                                href="/blog/6/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">
+                                <p>
+
+                                    <img class="blog-image"
+                                        src="/media/blog_images/GIS-mapping-Geographic-information-systems-1030x659_NQwadK1.jpg"
+                                        alt="" />
+
+                                    <p><strong>Introduction:</strong></p>
+
+                                    <p>In the rapidly evolving landscape of technology, one field that has consistently
+                                        witnessed groundbreaking advancements is Geographic Information Systems (GI...
+                                    </p>
+                            </a>
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a
+                                    href="/blog/5/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">Title:
+                                    Unveiling the Advancements in Geographic Information Systems (GIS)</a>
+                            </h4>
+                            <small>
+                                Jan. 16, 2024 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                            </small>
+                            <a
+                                href="/blog/5/Title:-Unveiling-the-Advancements-in-Geographic-Information-Systems-(GIS)/">
+                                <p>
+
+                                    <img class="blog-image"
+                                        src="/media/blog_images/GIS-mapping-Geographic-information-systems-1030x659.jpg"
+                                        alt="" />
+
+                                    <p><strong>Introduction:</strong></p>
+
+                                    <p>In the rapidly evolving landscape of technology, one field that has consistently
+                                        witnessed groundbreaking advancements is Geographic Information Systems (GI...
+                                    </p>
+                            </a>
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a
+                                    href="/blog/4/Unleashing-the-Power-of-QGIS:-A-Closer-Look-at-the-Swiss-Army-Knife-of-GIS/">Unleashing
+                                    the Power of QGIS: A Closer Look at the Swiss Army Knife of GIS</a>
+                            </h4>
+                            <small>
+                                Nov. 20, 2023 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                            </small>
+                            <a
+                                href="/blog/4/Unleashing-the-Power-of-QGIS:-A-Closer-Look-at-the-Swiss-Army-Knife-of-GIS/">
+                                <p>
+                                    <p><big><strong>Introduction:</strong></big></p>
+
+                                    <p><big>In the dynamic realm of Geographic Information Systems (GIS), QGIS stands
+                                            out as a versatile and open-source gem, offering a rich array of f...
+                                    </p>
+                            </a>
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a href="/blog/3/Navigating-the-World-of-GIS-Tools:-A-Brief-Overview/">Navigating the
+                                    World of GIS Tools: A Brief Overview</a>
+                            </h4>
+                            <small>
+                                Nov. 20, 2023 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                            </small>
+                            <a href="/blog/3/Navigating-the-World-of-GIS-Tools:-A-Brief-Overview/">
+                                <p>
+                                    <p><big><strong>Introduction:</strong></big></p>
+
+                                    <p><big>Geographic Information Systems (GIS) play a pivotal role in our
+                                            understanding of spatial data, enabling us to analyze, interpret, and
+                                            visual...
+                                    </p>
+                            </a>
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a href="/blog/2/Exploring-Spatial-Data-Made-Easy-with-GeoPandas/">Exploring Spatial
+                                    Data Made Easy with GeoPandas</a>
+                            </h4>
+                            <small>
+                                Nov. 18, 2023 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                                <a href="/blog/Python/">
+                                    #Python </a>&nbsp;
+                                <a href="/blog/Data%20Science/">
+                                    #Data Science </a>&nbsp;
+                            </small>
+                            <a href="/blog/2/Exploring-Spatial-Data-Made-Easy-with-GeoPandas/">
+                                <p>
+
+                                    <img class="blog-image" src="/media/blog_images/geopandas.png" alt="" />
+
+                                    <p><big><strong>Introduction:</strong></big></p>
+
+                                    <p><big>In the vast landscape of data analysis, the importance of spatial data
+                                            cannot be overstated. From urban planning and environmental monitorin...
+                                    </p>
+                            </a>
+
+                            <hr>
+                            <h4 id="ptitle">
+                                <a href="/blog/1/GIS-Intro/">GIS Intro</a>
+                            </h4>
+                            <small>
+                                Nov. 18, 2023 |&nbsp;
+                                Categories:&nbsp;
+                                <a href="/blog/GIS/">
+                                    #GIS </a>&nbsp;
+                            </small>
+                            <a href="/blog/1/GIS-Intro/">
+                                <p>
+
+                                    <img class="blog-image" src="/media/blog_images/GIS.png" alt="" />
+
+                                    <p><big>In our ever-connected and information-driven world, understanding the
+                                            spatial relationships and patterns that shape our environment has become
+                                            integral to decision-making across diverse fields...
+                                    </p>
+                            </a>
+
+                        </div>
+
+                        <div class="load-more-posts-btn">
+                            <!-- <a href="#"><i class="flaticon-loading"></i> Load More Posts</a> -->
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <meta property="og:title" content="Blog | Geodatapals" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://www.geodatapals.com/media/og_images/supply_chain_map.png" />
+                <meta property="og:image:width" content="300" />
+                <meta property="og:image:height" content="300" />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:creator" content="@finyfrank" />
+                <meta property="og:description" content="Blog posts" />
+                <meta property="og:site_name" content="Geodatapals" />
+
+
+
+
+                <!-- ======= Footer ======= -->
+                <footer id="footer">
+
+                    <div class="footer-newsletter">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <h4>Join Our Newsletter</h4>
+                                    <p>Subscribe to our newletter to get first hand information on our projects !!</p>
+
+                                    <form method="post" action="/mail_list">
+                                        <input type="hidden" name="csrfmiddlewaretoken"
+                                            value="hVxNpT2jhW853XYBasWKhNnPo9zShFLzlBCk30UXjlCoQbliw9BvYLeBa84Ybih8">
+                                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-lg-3 col-md-6 footer-contact">
+                                    <h3>Geodatapals<span>.</span></h3>
+                                    <p>
+                                        No 11, 21 Road, <br>
+                                        Efab Estate Lokogoma, <br>
+                                        900107 Abuja,<br>
+                                        Nigeria. <br><br>
+                                        <strong>Phone:</strong> +4915203049167<br>
+                                        <strong>Email:</strong> info@geodatapals.com<br>
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>Useful Links</h4>
+                                    <ul>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Terms of service</a>
+                                        </li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="/privacy">Privacy policy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>Our Services</h4>
+                                    <ul>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Web Mapping</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Software
+                                                Development</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Geospatial
+                                                Analysis</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">IT Training</a></li>
+                                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Data Science</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 footer-links">
+                                    <h4>Our Social Networks</h4>
+                                    <p>Follow our social media pages to get the lastest updates on our products</p>
+                                    <div class="social-links mt-3">
+                                        <a href="https://twitter.com/geodatapals" class="twitter"><i
+                                                class="bx bxl-twitter"></i></a>
+                                        <a href="https://www.facebook.com/people/Geodatapals/100083605425858/"
+                                            class="facebook"><i class="bx bxl-facebook"></i></a>
+                                        <a href="https://www.instagram.com/geodatapals/" class="instagram"><i
+                                                class="bx bxl-instagram"></i></a>
+                                        <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                                        <a href="https://www.linkedin.com/company/geodatapals" class="linkedin"><i
+                                                class="bx bxl-linkedin"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container py-4">
+                        <div class="copyright">
+                            &copy; Copyright <strong><span>Geodatapals</span></strong>. All Rights Reserved
+                        </div>
+                        <!--<div class="credits">-->
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+                        <!--  Designed <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+                        <!--</div>-->
+                    </div>
+
+                </footer><!-- End Footer -->
+
+                <div id="preloader"></div>
+                <a class="back-to-top d-flex align-items-center justify-content-center"><i
+                        class="bi bi-arrow-up-short"></i></a>
+
+                <!-- Vendor JS Files -->
+                <script src="/static/vendor/purecounter/purecounter_vanilla.js"></script>
+                <script src="/static/vendor/aos/aos.js"></script>
+
+                <!-- Leaflet -->
+                <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+                    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+                <!-- <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+                <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+                <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+                <!-- <script src="/static/vendor/swiper/swiper-bundle.min.js.map"></script> -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+                <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+                <script src="/static/vendor/php-email-form/validate.js"></script>
+
+                <!-- Template Main JS File -->
+                <script src="/static/dist/main.js"></script>
+
+                <!-- Links of JS files -->
+                <script src="/static/assets/js/jquery.min.js"></script>
+                <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+                <script src="/static/assets/js/jquery.magnific-popup.min.js"></script>
+                <script src="/static/assets/js/jquery-ui.min.js"></script>
+                <script src="/static/assets/js/simplebar.min.js"></script>
+                <script src="/static/assets/js/metismenu.min.js"></script>
+                <script src="/static/assets/js/owl.carousel.min.js"></script>
+                <script src="/static/assets/js/wow.min.js"></script>
+                <script src="/static/assets/js/main.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.js"></script>
+
+
+
+
+
+
+
+
+                <!-- Mapscripts -->
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                    crossorigin="anonymous"></script>
+
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"
+                    integrity="sha512-Oj9plGLST4IMXFXDfqMdTP+gSInbodkyno117PSjo5R08eu6TdzY9WPnnwQZGx2O2lG/kN0MzQk95ulWsRFuLA=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                <!-- begin libraries -->
+
+
+                <!--    *****  Begin Leaflet.Draw-->
+                <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+                <script src="/static/lib/leaflet.geometryutil.js"></script>
+                <script src="/static/lib/leaflet-draw/Leaflet.draw.js"></script>
+                <script src="/static/lib/leaflet-draw/Leaflet.Draw.Event.js"></script>
+                <link rel="stylesheet" href="/static/lib/leaflet-draw/leaflet.draw.css" />
+
+                <script src="/static/lib/leaflet-draw/Toolbar.js"></script>
+                <script src="/static/lib/leaflet-draw/Tooltip.js"></script>
+
+                <script src="/static/lib/leaflet-draw/ext/GeometryUtil.js"></script>
+                <script src="/static/lib/leaflet-draw/ext/LatLngUtil.js"></script>
+                <script src="/static/lib/leaflet-draw/ext/LineUtil.Intersect.js"></script>
+                <script src="/static/lib/leaflet-draw/ext/Polygon.Intersect.js"></script>
+                <script src="/static/lib/leaflet-draw/ext/Polyline.Intersect.js"></script>
+                <script src="/static/lib/leaflet-draw/ext/TouchEvents.js"></script>
+
+                <script src="/static/lib/leaflet-draw/draw/DrawToolbar.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Feature.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.SimpleShape.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polyline.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Circle.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Marker.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Polygon.js"></script>
+                <script src="/static/lib/leaflet-draw/draw/handler/Draw.Rectangle.js"></script>
+
+
+                <script src="/static/lib/leaflet-draw/edit/EditToolbar.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Edit.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/EditToolbar.Delete.js"></script>
+
+                <script src="/static/lib/leaflet-draw/Control.Draw.js"></script>
+
+                <script src="/static/lib/leaflet-draw/edit/handler/Edit.Poly.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/Edit.SimpleShape.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/Edit.Circle.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/Edit.Rectangle.js"></script>
+                <script src="/static/lib/leaflet-draw/edit/handler/Edit.Marker.js"></script>
+
+                <!--    ******  End of Lealet Draw-->
+                <script type="text/javascript" src="/static/lib/leaflet.browser.print.min.js"></script>
+                <script type="text/javascript" src="/static/lib/leaflet-measure.js"></script>
+
+                <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+                <script type="text/javascript" src="/static/lib/leaflet.markercluster.js"></script>
+                <script type="text/javascript"
+                    src="/static/lib/Leaflet.StyledLayerControl-master/src/styledLayerControl.js"></script>
+                <script src="/static/lib/Control-Sidebar.js"></script>
+                <script src="/static/dist/supply_chain_examples.js"></script>
+
+                <script src="/static/lib/jquery-ui.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+                <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrSb7Uq81AMmOIJMozrW6j8wYirtQhyiY&libraries=geometry,places"></script> -->
+
+
+
+                <!-- end libraries -->
+
+
+                <script>
+                    function mark_notification_as_read(notification_id) {
+                        $.ajax({
+                            url: "/message/notification/",
+                            type: "POST",
+                            data: {
+                                notification_id: notification_id,
+                                csrfmiddlewaretoken: "hVxNpT2jhW853XYBasWKhNnPo9zShFLzlBCk30UXjlCoQbliw9BvYLeBa84Ybih8",
+                            },
+                            success: function () {
+                                // Reload the page or update the UI to mark the notification as read
+                            },
+                            error: function (xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    }
+
+                    //
+
+                    $(document).ready(function () {
+                        // Add click event handler to the back-to-top button
+                        $('.back-to-top').on('click', function (e) {
+                            e.preventDefault();
+
+                            // Get the offset top position of the target element
+                            var targetOffset = $('#blue-nav').offset().top;
+
+                            // Scroll smoothly to the target element
+                            $('html, body').animate({ scrollTop: targetOffset }, 800);
+                        });
+                    });
+
+                    // Forum Like
+                    $(".like").click(function (e) {
+                        var id = this.id;
+                        var href = "/forum/post/like/"; // set href directly
+                        e.preventDefault();
+
+                        $.ajax({
+                            url: href,
+                            data: {
+                                'likeId': id
+                            },
+                            success: function (response) {
+                                if (response.liked) {
+                                    $('#likebtn' + id).html("Unlike | " + response.likes_count);
+                                    $('#likebtn' + id).css("color", "red")
+                                }
+                                else {
+                                    $('#likebtn' + id).html("Like | " + response.likes_count);
+                                    $('#likebtn' + id).css("color", "green")
+                                }
+                            }
+                        })
+                    });
+
+                </script>
+
+                <script>
+                    $(".like").click(function (e) {
+                        var id = this.id;
+                        var href = $(".like").find("a").attr("href");
+                        e.preventDefault();
+
+                        $.ajax({
+                            url: href,
+                            data: {
+                                likeId: id,
+                            },
+                            success: function (response) {
+                                if (response.liked) {
+                                    $("#likebtn" + id).html("Unlike | ");
+                                    $("#likebtn" + id).css("color", "red");
+                                } else {
+                                    $("#likebtn" + id).html("Like | ");
+                                    $("#likebtn" + id).css("color", "green");
+                                }
+                            },
+                        });
+                    });
+                </script>
+
+
+
+</body>
+
+</html>
